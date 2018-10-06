@@ -1,0 +1,850 @@
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToUsers (20180930202409)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "roles" decimal)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180930205850)[0m
+  [1m[35m (5.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180930202409);
+
+[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-05 19:00:57.726167"], ["updated_at", "2018-10-05 19:00:57.726167"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-10-05 15:01:31 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 1011ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (TypeError: Object doesn't support this property or method):
+    2: <html>
+    3: <head>
+    4:   <title>Real Estate Manager</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__143416872_47021780'
+Started GET "/" for 127.0.0.1 at 2018-10-05 15:01:36 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 2567ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (TypeError: Object doesn't support this property or method):
+    2: <html>
+    3: <head>
+    4:   <title>Real Estate Manager</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__143416872_86614060'
+Started GET "/" for 127.0.0.1 at 2018-10-05 15:02:14 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 125ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-10-05 15:02:20 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (32.8ms)
+  Rendered users/new.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 178ms (Views: 143.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-05 15:02:36 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O4TQgd3JeN2Sxn/zuFffIN3Sf8MjhQRBpprxtDASZe73kuEeSMfy9ohL13Zdf45siVG5B05rpfpWxKbT/sYozA==", "user"=>{"name"=>"Ameya", "email"=>"realtor@realtor.com", "password"=>"[FILTERED]", "roles"=>"1"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "realtor@realtor.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ameya"], ["email", "realtor@realtor.com"], ["created_at", "2018-10-05 19:02:36.271163"], ["updated_at", "2018-10-05 19:02:36.271163"], ["password_digest", "$2a$10$Id.MMbIsO2fs9YfVBq2ZC.uC8aRqWiK1QowtbpNz7OgsSHTS4I.dG"], ["roles", 1.0]]
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 73ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-05 15:02:36 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 124ms (Views: 88.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-05 15:02:39 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 112ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-05 15:02:41 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 144ms (Views: 109.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-05 15:02:56 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"izhGrK1DklPGI4Fs7lzrc5rir4WZteCigZiXuVm/ExmbdrbRF2XA5oOxGXKZI4+0VF3HXHSE+x/2mdvDbey4gQ==", "session"=>{"email"=>"realtor@realtor.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "realtor@realtor.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 52ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-05 15:02:56 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 112ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-05 15:05:58 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 121ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-10-05 15:06:01 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (25.9ms)
+  Rendered users/new.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 172ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-05 15:06:05 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 112ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-05 15:06:06 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 113ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-05 15:06:13 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y7/ruVd1pxIdYucLTYfC00t2Z1+Q9D3rjgmGDnGlFf7b8RvE7VP1p1jwfxU6+KYUhckPhn3FJlb5CMp0Rfa+Zg==", "session"=>{"email"=>"realtor@realtor.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "realtor@realtor.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 57ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-05 15:06:13 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 112ms (Views: 82.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-05 15:36:08 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 136ms (Views: 89.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-05 15:36:12 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 118ms (Views: 87.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateInquiries (20181005195351)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "inquiries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar, "message_content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181005195351"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-10-05 20:30:42 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Started GET "/" for 127.0.0.1 at 2018-10-05 20:30:43 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 442ms (Views: 264.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 344ms (Views: 264.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-05 20:30:51 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (107.9ms)
+Completed 200 OK in 469ms (Views: 317.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-05 20:31:03 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aum1MxJiADAltOgabQljJEjX6HXg11p7ZTiXYw593+M+ZJbrV6c931X6a4bf9sKxn/ZVKBVkBaS+fM/Qw+3uQw==", "session"=>{"email"=>"realtor@realtor.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "realtor@realtor.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 149ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-05 20:31:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 345ms (Views: 234.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-05 20:31:09 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (14.1ms)
+  Rendered users/edit.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 470ms (Views: 391.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-05 20:31:16 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 282ms (Views: 214.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-05 20:31:51 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 171ms (Views: 92.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-10-05 20:31:57 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.2ms)
+  Rendered users/new.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 161ms (Views: 125.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 11:23:04 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 123ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 11:25:00 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 134ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 11:28:11 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 120ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/new" for 127.0.0.1 at 2018-10-06 11:28:15 -0400
+Processing by InquiriesController#new as HTML
+  Rendering inquiries/new.html.erb within layouts/application
+  Rendered inquiries/_form.html.erb (30.0ms)
+  Rendered inquiries/new.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 183ms (Views: 140.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 11:28:18 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 117ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/new" for 127.0.0.1 at 2018-10-06 11:28:25 -0400
+Processing by InquiriesController#new as HTML
+  Rendering inquiries/new.html.erb within layouts/application
+  Rendered inquiries/_form.html.erb (2.0ms)
+  Rendered inquiries/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 137ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/inquiries" for 127.0.0.1 at 2018-10-06 11:28:38 -0400
+Processing by InquiriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tMEypERwKVOaNB9QBkDI2/DHK1PDJ/zeVpoh2chiiCKTEwC89qChPbScr6X1bDWSyoBT8BjGatp4zLcwODJKOQ==", "inquiry"=>{"subject"=>"My first inquiry", "message_content"=>"Testing inquiries"}, "commit"=>"Create Inquiry"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "inquiries" ("subject", "message_content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "My first inquiry"], ["message_content", "Testing inquiries"], ["created_at", "2018-10-06 15:28:38.451148"], ["updated_at", "2018-10-06 15:28:38.451148"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/inquiries/1
+Completed 302 Found in 10ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/inquiries/1" for 127.0.0.1 at 2018-10-06 11:28:38 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 115ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/1/edit" for 127.0.0.1 at 2018-10-06 11:28:42 -0400
+Processing by InquiriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/edit.html.erb within layouts/application
+  Rendered inquiries/_form.html.erb (2.0ms)
+  Rendered inquiries/edit.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 141ms (Views: 111.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/inquiries/1" for 127.0.0.1 at 2018-10-06 11:28:53 -0400
+Processing by InquiriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xm9dhyIxLM7ZWydoESwNpGl1SxKfi2AqNhONw2VL2hac9YiRSePR5CDr0gmChKGn+7tZKiitWUhfqlt45sXhVA==", "inquiry"=>{"subject"=>"My first inquiry", "message_content"=>"Testing inquiries\r\nTesting inquiries again!"}, "commit"=>"Update Inquiry", "id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.4ms)[0m  [1m[33mUPDATE "inquiries" SET "message_content" = ?, "updated_at" = ? WHERE "inquiries"."id" = ?[0m  [["message_content", "Testing inquiries\r\nTesting inquiries again!"], ["updated_at", "2018-10-06 15:28:53.530624"], ["id", 1]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/inquiries/1
+Completed 302 Found in 12ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/inquiries/1" for 127.0.0.1 at 2018-10-06 11:28:53 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 112ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 11:28:55 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (1.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 110ms (Views: 79.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/inquiries/1" for 127.0.0.1 at 2018-10-06 11:29:10 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 107ms (Views: 79.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/1/edit" for 127.0.0.1 at 2018-10-06 11:29:13 -0400
+Processing by InquiriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/edit.html.erb within layouts/application
+  Rendered inquiries/_form.html.erb (1.0ms)
+  Rendered inquiries/edit.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 141ms (Views: 110.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/inquiries/1" for 127.0.0.1 at 2018-10-06 11:29:18 -0400
+Processing by InquiriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pMqJ4xxHa3sNOXVZXqudrxU0FkuQmnaGapXuZkqnRa5mUFz1d5WWUfSJgDjNAzGsh/oEcye8T+QDLDjdySl+7A==", "inquiry"=>{"subject"=>"My first inquiry", "message_content"=>"Testing inquiries\r\nTesting inquiries again!\r\n3"}, "commit"=>"Update Inquiry", "id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "inquiries" SET "message_content" = ?, "updated_at" = ? WHERE "inquiries"."id" = ?[0m  [["message_content", "Testing inquiries\r\nTesting inquiries again!\r\n3"], ["updated_at", "2018-10-06 15:29:18.889898"], ["id", 1]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/inquiries/1
+Completed 302 Found in 10ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/inquiries/1" for 127.0.0.1 at 2018-10-06 11:29:18 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 110ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 11:29:22 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 109ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/1" for 127.0.0.1 at 2018-10-06 11:29:24 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 109ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 11:29:27 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 108ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/1" for 127.0.0.1 at 2018-10-06 11:29:29 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 110ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 11:29:32 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 108ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/new" for 127.0.0.1 at 2018-10-06 11:29:39 -0400
+Processing by InquiriesController#new as HTML
+  Rendering inquiries/new.html.erb within layouts/application
+  Rendered inquiries/_form.html.erb (1.1ms)
+  Rendered inquiries/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 137ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 11:29:50 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (1.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 108ms (Views: 79.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 12:32:46 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 114ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-06 12:32:50 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 127ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-06 12:32:55 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fgfbk/niLOsED3fkfYZ56ZJUVY15PUz6VQzPBcb++sLWKLI20P7/3rQsCyH794BzWzeByDFLmwHgCw2blKKtWA==", "session"=>{"email"=>"realtor@realtor.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "realtor@realtor.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 64ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-06 12:32:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    16:   <%= @user.roles%>
+    17: </p>
+    18: 
+    19: <% @inquiries.each do |inquiry| %>
+    20:   <tr>
+    21:     <td><%= inquiry.subject %></td>
+    22:     <td><%= link_to 'Show', inquiry %></td>
+  
+app/views/users/show.html.erb:19:in `_app_views_users_show_html_erb__437158124_65923400'
+Started GET "/" for 127.0.0.1 at 2018-10-06 12:38:31 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 115ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-10-06 12:38:35 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (24.6ms)
+  Rendered users/new.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 165ms (Views: 131.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-06 12:38:59 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t53fLmFrXrlYEByvSDS/fHl6ChM6BHWCLQDfYnh6toU3UwYmmGX4jbKTvFedO6b6zt9EOG2bnCGCv+BlXBUBEA==", "user"=>{"name"=>"ABC", "email"=>"hunter@hunter.com", "password"=>"[FILTERED]", "roles"=>"2"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunter@hunter.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ABC"], ["email", "hunter@hunter.com"], ["created_at", "2018-10-06 16:38:59.703069"], ["updated_at", "2018-10-06 16:38:59.703069"], ["password_digest", "$2a$10$zTT86kKKmAN5URNre9XuWuNJ4YQHXvCuvTV/W0YAf87qBbDFLQL8i"], ["roles", 2.0]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 64ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-10-06 12:38:59 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 112ms (Views: 78.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/new" for 127.0.0.1 at 2018-10-06 12:39:02 -0400
+Processing by InquiriesController#new as HTML
+  Rendering inquiries/new.html.erb within layouts/application
+  Rendered inquiries/_form.html.erb (3.0ms)
+  Rendered inquiries/new.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 140ms (Views: 106.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/inquiries" for 127.0.0.1 at 2018-10-06 12:39:26 -0400
+Processing by InquiriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYSUHHeEzIZ5yLGIHyUkwls7LmCFex2vW1VkRzrgMI4aVqYExVRE6FdgAX3sCdmLYXxWw16ai6t1A/KuyrDylQ==", "inquiry"=>{"subject"=>"My first inquiry", "message_content"=>"Hunter making first inquiry"}, "commit"=>"Create Inquiry"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "inquiries" ("subject", "message_content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["subject", "My first inquiry"], ["message_content", "Hunter making first inquiry"], ["created_at", "2018-10-06 16:39:26.073325"], ["updated_at", "2018-10-06 16:39:26.073325"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/inquiries/2
+Completed 302 Found in 12ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/inquiries/2" for 127.0.0.1 at 2018-10-06 12:39:26 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 104ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/2/edit" for 127.0.0.1 at 2018-10-06 12:39:29 -0400
+Processing by InquiriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mInquiry Load (1.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering inquiries/edit.html.erb within layouts/application
+  Rendered inquiries/_form.html.erb (2.0ms)
+  Rendered inquiries/edit.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 131ms (Views: 103.3ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/inquiries/2" for 127.0.0.1 at 2018-10-06 12:39:34 -0400
+Processing by InquiriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rSyRrWB3WQPqytiWsW0vcB3INlcaIPiKyU8ocD7hHPRXzUb7pKmI1nJ4eQhhlnJ7vw4ht5VF0Gy/OXFVn/+ACA==", "inquiry"=>{"subject"=>"My first inquiry", "message_content"=>"Hunter making first inquiry\r\nAgain"}, "commit"=>"Update Inquiry", "id"=>"2"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[33mUPDATE "inquiries" SET "message_content" = ?, "updated_at" = ? WHERE "inquiries"."id" = ?[0m  [["message_content", "Hunter making first inquiry\r\nAgain"], ["updated_at", "2018-10-06 16:39:34.874145"], ["id", 2]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/inquiries/2
+Completed 302 Found in 13ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/inquiries/2" for 127.0.0.1 at 2018-10-06 12:39:34 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 103ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 12:39:36 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 103ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/2" for 127.0.0.1 at 2018-10-06 12:39:39 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 103ms (Views: 75.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 12:39:45 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 107ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/2" for 127.0.0.1 at 2018-10-06 12:40:39 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 103ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 12:40:42 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 103ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 12:45:06 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 114ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-06 12:45:10 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 121ms (Views: 94.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-06 12:45:21 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVcxmnaT/3CyXBHZsOL4ey9NrOBzSNPtmHxjcXwm3zzVeFg/X48sRQJ/bRw2kwHh5i54pTs+BBYte6HvLnqIpg==", "session"=>{"email"=>"hunter@hunter.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunter@hunter.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 63ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-10-06 12:45:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 105ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/new" for 127.0.0.1 at 2018-10-06 12:45:24 -0400
+Processing by InquiriesController#new as HTML
+  Rendering inquiries/new.html.erb within layouts/application
+  Rendered inquiries/_form.html.erb (3.0ms)
+  Rendered inquiries/new.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 142ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 12:45:26 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 104ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/2" for 127.0.0.1 at 2018-10-06 12:45:31 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mInquiry Load (1.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Inquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 104ms (Views: 76.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 12:45:38 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 105ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 12:53:50 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 106ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-06 12:53:59 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 108ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-06 12:54:14 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9zuGSYvSr8u89LZOhGxT5u3OTfC5PSFpfOQpWkK8FpVfFO/sos58/gzXyosCHap8JK2ZtfFL9pLJ4+vEEOBBDw==", "session"=>{"email"=>"hunter@hunter.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunter@hunter.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 50ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-10-06 12:54:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 105ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/new" for 127.0.0.1 at 2018-10-06 12:54:17 -0400
+Processing by InquiriesController#new as HTML
+  Rendering inquiries/new.html.erb within layouts/application
+  Rendered inquiries/_form.html.erb (2.0ms)
+  Rendered inquiries/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 130ms (Views: 102.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 12:54:19 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 104ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/1" for 127.0.0.1 at 2018-10-06 12:54:22 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (1.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Inquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 102ms (Views: 75.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 12:54:24 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 121ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/1/edit" for 127.0.0.1 at 2018-10-06 12:54:27 -0400
+Processing by InquiriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Inquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/edit.html.erb within layouts/application
+  Rendered inquiries/_form.html.erb (4.0ms)
+  Rendered inquiries/edit.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 135ms (Views: 106.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/inquiries/1" for 127.0.0.1 at 2018-10-06 12:54:33 -0400
+Processing by InquiriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+cq6dHSFVhSdp1QPHv79qFZ09RuDfmj5BYig+j27WIU7UG9iH1erPmQXoW6NVlGrxLrnIzRYUZtsMXZBvjVjxw==", "inquiry"=>{"subject"=>"My first inquiry", "message_content"=>"Testing inquiries\r\nTesting inquiries again!\r\n3\r\n4"}, "commit"=>"Update Inquiry", "id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "inquiries" SET "message_content" = ?, "updated_at" = ? WHERE "inquiries"."id" = ?[0m  [["message_content", "Testing inquiries\r\nTesting inquiries again!\r\n3\r\n4"], ["updated_at", "2018-10-06 16:54:33.760956"], ["id", 1]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/inquiries/1
+Completed 302 Found in 9ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/inquiries/1" for 127.0.0.1 at 2018-10-06 12:54:33 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (1.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Inquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 109ms (Views: 78.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 12:54:37 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 105ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/1" for 127.0.0.1 at 2018-10-06 12:54:40 -0400
+Processing by InquiriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Inquiry Load (0.0ms)[0m  [1m[34mSELECT  "inquiries".* FROM "inquiries" WHERE "inquiries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering inquiries/show.html.erb within layouts/application
+  Rendered inquiries/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 107ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-06 12:54:42 -0400
+Processing by InquiriesController#index as HTML
+  Rendering inquiries/index.html.erb within layouts/application
+  [1m[36mInquiry Load (0.0ms)[0m  [1m[34mSELECT "inquiries".* FROM "inquiries"[0m
+  Rendered inquiries/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 109ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
