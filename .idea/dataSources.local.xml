@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="development" uuid="cccf0467-e614-435e-bac0-9aa21d6d1e50">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+    </data-source>
+    <data-source name="Rails CSC517RubyOnRails: production" uuid="53c538b5-5e18-4498-9a79-f2358371eb09">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+    </data-source>
+    <data-source name="Rails CSC517RubyOnRails: test" uuid="95c30c36-7a73-4cd3-9635-340ccd6d603d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+    </data-source>
+    <data-source name="Rails CSC517RubyOnRails: development" uuid="02e52a85-fda9-4168-b782-cbbde473a9a3">
+      <database-info product="SQLite" version="3.20.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.20.1.1" family="SQLITE" exact-version="3.20.1" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:@</introspection-schemas>
+    </data-source>
+  </component>
+</project>

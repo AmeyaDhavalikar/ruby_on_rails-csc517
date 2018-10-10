@@ -1,20 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="container" style="margin-left: 10px">
+  <p id="notice"><%= notice %></p>
+  <h1>Your details!</h1><br>
+  <p>
+    <b>Name:</b>
+    <%= @user.name %>
+  </p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+  <p>
+    <b>Email:</b>
+    <%= @user.email %>
+  </p>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+  <p>
+    <b>Roles:</b>
+    <!-- remember to turn these into strings-->
+    <%= @user.roles %>
+  </p>
 
-<p>
-  <b>Roles:</b>
-  <!-- remember to turn these into strings-->
-  <%= @user.roles%>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+</div>

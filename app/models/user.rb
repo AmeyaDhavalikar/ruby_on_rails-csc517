@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
   validates :email, :presence => true,
             :uniqueness => true
   validates :roles, :presence => true
+  enum roles:[:'Realtor',:'House Hunter']
 end

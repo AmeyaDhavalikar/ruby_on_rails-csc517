@@ -1,6 +1,12 @@
-<h1>Editing Your Profile</h1>
+<div class="container" style="margin-top: 50px">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Editing Your Profile</h2>
+      <br>
+      <%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+      <%= link_to 'Show', @user %> |
+      <%= link_to 'Back', users_path %>
+    </div>
+  </div>
+</div>

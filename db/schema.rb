@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180930205850) do
+ActiveRecord::Schema.define(version: 20181010161958) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  create_table "house_hunters", force: :cascade do |t|
+    t.string "email"
+    t.string "password"
+    t.string "name"
+    t.string "phone"
+    t.string "preffered_contact"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "houses", force: :cascade do |t|
+    t.string "location"
+    t.string "address"
+    t.string "house_owner"
+    t.integer "price"
+    t.integer "year_built"
+    t.integer "floors"
+    t.boolean "basement"
+    t.integer "style"
+    t.integer "square_footage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "real_estate_companies", force: :cascade do |t|
+    t.string "name"
+    t.string "website"
+    t.string "address"
+    t.integer "size"
+    t.integer "year_founded"
+    t.integer "revenue"
+    t.text "synopsis"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name", limit: 255
@@ -22,6 +55,13 @@ ActiveRecord::Schema.define(version: 20180930205850) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.decimal "roles"
+    t.string "confirm_password"
+    t.string "phone_no"
+  end
+
+  create_table "welcomes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

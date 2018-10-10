@@ -12,26 +12,36 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label 'Username' %><br/>
+    <%= f.text_field :name, class: 'form-control', required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
+    <%= f.label 'Email Addess' %><br/>
+    <%= f.email_field :email, class: 'form-control', required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= f.label 'Password' %><br/>
+    <%= f.password_field :password, class: 'form-control', required: true %>
   </div>
 
+  <!--  <div class="field">-->
+  <!--    <%#= f.label 'Confirm Password' %><br/>-->
+  <%#= f.password_field :confirm_password %>
+  <!--  </div>-->
+
+  <!--  <div class="field">-->
+  <!--    <%#= f.label 'Phone Number' %><br/>-->
+  <%#= f.text_field :phone_no %>
+  <!--  </div>-->
+
   <div class="field">
-    <%= f.label :roles %><br />
-    <%= f.select :roles, [['I am a realtor', 1], ['I am shopping for a house', 2],
-                                 ['I am a realtor and I am shopping for a house', 3]] %>
+    <%= f.label :roles %><br/>
+    <%= f.select :roles, User.roles.keys %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="actions" style="margin-top: 20px">
+    <%= f.submit "SIGN UP", class: "btn btn-outline-secondary btn-block" %>
   </div>
 <% end %>

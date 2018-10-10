@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  resources :house_hunters
+  resources :welcomes
+  resources :real_estate_companies
+  resources :houses
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users
   resources :sessions
 
-  root 'users#index'
+  root 'welcomes#index'
 
   get '/', to: 'static_pages#index'
   get '/index', to: 'static_pages#index'

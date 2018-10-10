@@ -1,5 +1,15 @@
-<h1>Create Your Account</h1>
+<div class="container" style="margin-top: 50px">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Create Your Account</h2>
+      <h6 class="card-subtitle mb-2 text-muted">If you don't have an account,create here!</h6>
+      <!--      <h2>Create Your Account</h2>-->
+      <br>
+      <%= render 'form' %>
+      <br>
+      <p>Already have an
+        account?<%= link_to '<button type="button" class="btn btn-link">Sign in!</button>'.html_safe, new_session_url %></p>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', users_path %>
+    </div>
+  </div>
+</div>

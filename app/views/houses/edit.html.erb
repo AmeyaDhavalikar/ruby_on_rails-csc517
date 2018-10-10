@@ -1,0 +1,13 @@
+<div class="container" style="margin-top: 50px">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Editing House</h2>
+      <br>
+
+      <%= render 'form', house: @house %>
+
+      <%= link_to 'Show', @house %> |
+      <%= link_to 'Back', houses_path %>
+    </div>
+  </div>
+</div>
