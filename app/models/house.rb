@@ -1,5 +1,6 @@
 class House < ApplicationRecord
   #belongs_to :real_estate_company
+  #belongs_to :user
 
   validates :location, :presence => true
   validates :square_footage, :presence => true

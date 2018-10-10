@@ -1,4 +1,4 @@
-Welcome to the Real Estate Manager, <%= User.find_by(id: session[:user_id]).name %><br />
+Welcome to the Real Estate Manager,<%= @user.name %><br />
 <%= link_to "Edit Your Profile", edit_user_path(@user) %><br />
 <%= link_to "Log Out", '/logout' %><br />
 <!-- if realtor -->
