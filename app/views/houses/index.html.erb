@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <h1>Houses</h1>
+  <p>List of all the houses available.</p><br>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Located At</th>
+      <th>Price</th>
+      <th>Square Footage</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @houses.each do |house| %>
+      <tr>
+        <td><%= house.location %></td>
+        <td><%= house.price %></td>
+        <td><%= house.square_footage %></td>
+        <td><%= link_to 'Show', house %></td>
+        <!-- If listing realtor -->
+        <td><%= link_to 'Edit', edit_house_path(house) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+<br>
+
+<!-- If realtor -->
+<%= link_to 'List a House', new_house_url %>
+<%= link_to 'Home', users_path %>

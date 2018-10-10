@@ -1,4 +1,2 @@
 <%= User.find_by(id: session[:user_id]).name %>
-<%= User.find_by(id: session[:user_id]).house_hunter %>
-<%= User.find_by(id: session[:user_id]).realtor %>
-<%= User.find_by(id: session[:user_id]).admin %>
+<%= User.find_by(id: session[:user_id]).roles %>

@@ -1,0 +1,13 @@
+Welcome to the Real Estate Manager, <%= User.find_by(id: session[:user_id]).name %><br />
+<%= link_to "Edit Your Profile", edit_user_path(@user) %><br />
+<%= link_to "Log Out", '/logout' %><br />
+<!-- if realtor -->
+<%= link_to "List House", new_house_path  if @user.roles != 2 %><br />
+<%= link_to "View Inquiries on Your Company's Houses", inquiries_path if @user.roles != 2 %><br />
+<%= link_to "Edit Your Company Information", real_estate_companies_path if @user.roles != 2 %><br />
+<%= link_to "View Your Listed Houses", houses_path if @user.roles != 2 %><br />
+<%= link_to "View All Listed Houses", houses_path if @user.roles != 2 %><br />
+<!-- if house hunter -->
+<%= link_to "Browse Houses", houses_path if @user.roles != 1%><br />
+<%= link_to "View Your Inquiries", inquiries_path if @user.roles != 1%><br />
+<%= link_to "View Real Estate Company Information", real_estate_companies_path if @user.roles != 1 %><br />

@@ -2,19 +2,39 @@
 
 <p>
   <b>Name:</b>
-  <%= @user.name %>
+  <%= @real_estate_company.name %>
 </p>
 
 <p>
-  <b>Email:</b>
-  <%= @user.email %>
+  <b>Website URL:</b>
+  <%= @real_estate_company.website %>
 </p>
 
 <p>
-  <b>Roles:</b>
-  <!-- remember to turn these into strings-->
-  <%= @user.roles%>
+  <b>Address:</b>
+  <%= @real_estate_company.address %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<p>
+  <b>Size:</b>
+  <%= @real_estate_company.size %>
+</p>
+
+<p>
+  <b>Founded:</b>
+  <%= @real_estate_company.founded %>
+</p>
+
+<p>
+  <b>Revenue:</b>
+  <%= @real_estate_company.revenue %>
+</p>
+
+<p>
+  <b>Synopsis:</b>
+  <%= @real_estate_company.synopsis %>
+</p>
+
+
+<%= link_to 'Edit', edit_real_estate_company_path(@real_estate_company) %> |
+<%= link_to 'Back', real_estate_companies_path %>

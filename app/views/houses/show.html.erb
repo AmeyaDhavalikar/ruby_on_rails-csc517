@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location:</b>
+  <%= @house.location %>
+</p>
+
+<p>
+  <b>Square Footage:</b>
+  <%= @house.square_footage %>
+</p>
+
+<p>
+  <b>Year Built:</b>
+  <%= @house.year %>
+</p>
+
+<p>
+  <b>Style:</b>
+  <%= @house.style %>
+</p>
+
+<p>
+  <b>List Price:</b>
+  <%= @house.price %>
+</p>
+
+<p>
+  <b>Number of Floors:</b>
+  <%= @house.floors %>
+</p>
+
+<p>
+  <b>Has Basement:</b>
+  <%= @house.basement %>
+</p>
+
+<!-- If posting realtor -->
+<%= link_to 'Edit', edit_house_path(@house) %> |
+<!-- If house hunter -->
+<%= link_to 'Inquire about this House', new_inquiry_path %>
+
+<%= link_to 'Back', houses_path %>
