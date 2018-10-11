@@ -3076,3 +3076,1385 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 45ms (Views: 28.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 17:42:34 -0400
+Processing by HousesController#new as HTML
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (12.0ms)
+  Rendered houses/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 79ms (Views: 46.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-10 17:42:44 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for InquiriesController):
+  
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:119:in `process'
+vendor/cache/ruby/2.4.0/gems/actionview-5.1.6/lib/action_view/rendering.rb:30:in `process'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:844:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/etag.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/conditional_get.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/head.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/cache/ruby/2.4.0/gems/activerecord-5.1.6/lib/active_record/migration.rb:556:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:24:in `call'
+vendor/cache/ruby/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/engine.rb:522:in `call'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/real_estate_companies" for 127.0.0.1 at 2018-10-10 17:42:49 -0400
+Processing by RealEstateCompaniesController#index as HTML
+  Rendering real_estate_companies/index.html.erb within layouts/application
+  Rendered real_estate_companies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 38ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 18:05:19 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-10-10 18:05:21 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (26.0ms)
+  Rendered users/new.html.erb within layouts/application (35.0ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    34: 
+    35:   <div class="field">
+    36:     <%= f.label :company_id %>
+    37:     <% options = options_from_collection_for_select(@real_estate_company, 'id', 'name') %>
+    38:     <%= f.select :all_val, options %>
+    39:   </div>
+    40: 
+  
+app/views/users/_form.html.erb:37:in `block in _app_views_users__form_html_erb__71537463_57714240'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__71537463_57714240'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__810251045_57842260'
+Started GET "/users/new" for 127.0.0.1 at 2018-10-10 18:05:50 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (15.0ms)
+  Rendered users/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 79ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-10 18:05:54 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 18:06:41 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-10-10 18:06:44 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (16.0ms)
+  Rendered users/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 73ms (Views: 51.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 18:06:45 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 18:06:47 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-10-10 18:06:50 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 48ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 18:06:51 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 18:06:52 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 18:06:56 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0HUihAGrV3+fjPB+1eyjSUB00rKNfGTdZM58JemV2Rm40ufDzZAx9+mW+4uV2KB0B0Q6Lws9D0qdy7kOc6JImA==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 61ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:06:56 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 27.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:06:59 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/edit.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 50ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:07:05 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:07:07 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 51ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 18:07:08 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-10 18:07:10 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 41ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 18:07:20 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 18:07:24 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uacdj2X4ibfooMumEipyMQXS9OQqk5QMlOmttVhZdVA5ANjIqcPvP566wFNSHnEMQuIceazS/5tt7Giewm7k0Q==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 56ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:07:24 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:07:26 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 48ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 18:07:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:07:41 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 18:07:43 -0400
+Processing by HousesController#new as HTML
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (6.0ms)
+  Rendered houses/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 59ms (Views: 40.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 18:07:45 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-10 18:08:09 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 45ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 18:08:36 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 18:08:37 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 18:08:41 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJE33pf87O0FKyEuNJSsA98pz7rqxBAn6HqXQQwMDMnUNvKZW8eKZXMxKtt0oK8+mBknJ2yFe7ARf1JqljudSA==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 56ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:08:41 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:08:42 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 47ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:08:44 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:08:45 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 47ms (Views: 37.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 18:08:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:08:49 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:10:46 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 58ms (Views: 38.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 18:12:32 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 48ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:12:35 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:12:38 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 48ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 18:12:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:12:43 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 47ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 18:12:44 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:13:08 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 26.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:13:10 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 47ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 18:13:11 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:13:13 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 18:13:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:13:15 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 47ms (Views: 36.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:13:16 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:13:18 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 48ms (Views: 37.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:13:19 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 18:13:20 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:13:21 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 18:13:23 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 48ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 18:13:25 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 18:13:57 -0400
+Processing by HousesController#new as HTML
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (3.0ms)
+  Rendered houses/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 57ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 19:12:39 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 19:12:42 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 50ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:12:46 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VtVcca7QqhsE/EsIkqEKDyqGPvjKdHP7NhD8C2V9780+cpk2YuvMk3LmQP3SlQkybbbWZUw1GGzPFTkg/0p+TA==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 69ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:12:46 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 19:12:48 -0400
+Processing by HousesController#new as HTML
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (11.0ms)
+  Rendered houses/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 65ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 19:13:16 -0400
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xki5E93l4k4TFC4GctUV/BZxwy2tOBR8vLY57K/ilu2hc0A8E05xYazghitpxejg3hZKjvFcIfGzvYmB505+Yg==", "house"=>{"location"=>"there", "square_footage"=>"2240", "year"=>"1996", "style"=>"Single Family House", "price"=>"115000", "floors"=>"3", "basement"=>"1", "owner"=>"amy", "realtor_id"=>"1"}, "commit"=>"Create House"}
+Unpermitted parameter: :realtor_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (3.0ms)
+  Rendered houses/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 19:13:43 -0400
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xki5E93l4k4TFC4GctUV/BZxwy2tOBR8vLY57K/ilu2hc0A8E05xYazghitpxejg3hZKjvFcIfGzvYmB505+Yg==", "house"=>{"location"=>"there", "square_footage"=>"2240", "year"=>"1996", "style"=>"Single Family House", "price"=>"115000", "floors"=>"3", "basement"=>"1", "owner"=>"amy", "realtor_id"=>"1"}, "commit"=>"Create House"}
+Unpermitted parameter: :realtor_id
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (3.0ms)
+  Rendered houses/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 19:13:45 -0400
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w5n/2aPE0VJTPzyNcmTmIjwtrfCWrNLozbLvXTWKxM+kogb2bW9CfezLlKBpdBs+9EokU8rI52XCuV8wfSYsQA==", "house"=>{"location"=>"there", "square_footage"=>"2240", "year"=>"1996", "style"=>"Single Family House", "price"=>"115000", "floors"=>"3", "basement"=>"1", "owner"=>"amy", "realtor_id"=>"1"}, "commit"=>"Create House"}
+Unpermitted parameter: :realtor_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (3.0ms)
+  Rendered houses/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 19:14:26 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 19:14:28 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 49ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:14:34 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SwMNfJALTDll1pKhkJUKlCOtjvYcMGhl/G+zHhV2cqQjpMg7XDAqsRPMmVTQoQmpZJ1ma5pxA/IFanY1j0HjJQ==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 68ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:14:34 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 19:14:36 -0400
+Processing by HousesController#new as HTML
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (6.0ms)
+  Rendered houses/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 63ms (Views: 40.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 19:14:53 -0400
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DLdgJ/cSfyEnQFlwYtA+vFJgom8RZlIUOVTwDwJxbVRrjJkIObnsDpi08V15wMOgmgcrzE0CZ5k2X0BiSt2F2w==", "house"=>{"location"=>"there", "square_footage"=>"2240", "year"=>"1996", "style"=>"Single Family House", "price"=>"115000", "floors"=>"3", "basement"=>"1", "owner"=>"amy"}, "commit"=>"Create House"}
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<HousesController:0x0000000006efa3e8>
+Did you mean?  user_url):
+  
+app/controllers/houses_controller.rb:16:in `create'
+Started GET "/" for 127.0.0.1 at 2018-10-10 19:15:14 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 19:15:16 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 52ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:15:20 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Q4NE4EYojlvZ3RPe+h/yNp0zHa+hlE6BMw8zqLCeXyNqchUTSPEsRl9f7o73Hz1nUQk6zjHOq39yfnlOPXo/Q==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 68ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:15:20 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 19:15:21 -0400
+Processing by HousesController#new as HTML
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (7.0ms)
+  Rendered houses/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 60ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 19:15:35 -0400
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uk+Pz2ASViiyZ3Fa/Lea8ceZXRn3/ESxDNSEPVic5sk1dHbgrrnFBw2T2Xfnp2ftD/7UuquYcTwD3zRQEDAORg==", "house"=>{"location"=>"there", "square_footage"=>"2000", "year"=>"1996", "style"=>"Single Family House", "price"=>"110000", "floors"=>"3", "basement"=>"1", "owner"=>"amy"}, "commit"=>"Create House"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/houses_controller.rb:16:in `create'
+Started GET "/" for 127.0.0.1 at 2018-10-10 19:21:25 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 19:21:28 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 54ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:21:32 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BLczihXAOby5teiWks4gBX4H6fXYZf1qXfCFGWwQ161sEPbN2ftfNM+v42PS+iM4OTcBaF4klv2k9UAy9idGLA==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 69ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:21:32 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 19:21:33 -0400
+Processing by HousesController#new as HTML
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (6.0ms)
+  Rendered houses/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 58ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 19:21:51 -0400
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XKrqJ6l9WXp/iv4L2mFYKNLDzLyzt9p4wyM0VYtGWEE7kRMIZ9bKVcB+VibBcaU0GqRFH+/T7/XMKIQ4w+qwzg==", "house"=>{"location"=>"there", "square_footage"=>"2200", "year"=>"1996", "style"=>"Single Family House", "price"=>"110000", "floors"=>"3", "basement"=>"1", "owner"=>"amy"}, "commit"=>"Create House"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (2.0ms)
+  Rendered houses/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 19:22:38 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XKrqJ6l9WXp/iv4L2mFYKNLDzLyzt9p4wyM0VYtGWEE7kRMIZ9bKVcB+VibBcaU0GqRFH+/T7/XMKIQ4w+qwzg==", "house"=>{"location"=>"there", "square_footage"=>"2200", "year"=>"1996", "style"=>"Single Family House", "price"=>"110000", "floors"=>"3", "basement"=>"1", "owner"=>"amy"}, "commit"=>"Create House"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "houses" ("realtor_id", "location", "square_footage", "year", "style", "price", "floors", "basement", "owner") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["realtor_id", 1], ["location", "there"], ["square_footage", "2200"], ["year", 1996], ["style", "Single Family House"], ["price", 110000], ["floors", 3], ["basement", "t"], ["owner", "amy"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/houses/2
+Completed 302 Found in 30ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/houses/2" for 127.0.0.1 at 2018-10-10 19:22:40 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 30.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 19:22:51 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 19:22:53 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 49ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:22:56 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fc4HQ5VvhdGSC9d9aE6wCo4rKgGv1E7WKebA2+kJhwUVacIEWVTjWeQR3IgoerM3yRvCnCmVJUHQ4wXwcz4WhA==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 69ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:22:56 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 19:22:58 -0400
+Processing by HousesController#new as HTML
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (10.0ms)
+  Rendered houses/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 55ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 19:23:15 -0400
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RFB+vlEQMmpLDrhmZPLRUXutlTM2N+tHjZf+Z5oYS3Yja4eRn7uhRfT6EEt/4ixNs8ockGpT3sqCnE4K0rSj+Q==", "house"=>{"location"=>"there", "square_footage"=>"2240", "year"=>"1996", "style"=>"Single Family House", "price"=>"110000", "floors"=>"2", "basement"=>"0", "owner"=>"bob"}, "commit"=>"Create House"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (6.0ms)
+  Rendered houses/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 19:23:36 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0sJnDnDnKmhM7OccpFaXewjmioyFU9YtOTnjFGLlnZm1+Z4hvky5R/MYTzG/RmpnwIEDL9k346A2MlN5Kkl1Fg==", "house"=>{"location"=>"there", "square_footage"=>"2240", "year"=>"1996", "style"=>"Single Family House", "price"=>"110000", "floors"=>"2", "basement"=>"0", "owner"=>"bob"}, "commit"=>"Create House"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "houses" ("realtor_id", "location", "square_footage", "year", "style", "price", "floors", "basement", "owner") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["realtor_id", 1], ["location", "there"], ["square_footage", "2240"], ["year", 1996], ["style", "Single Family House"], ["price", 110000], ["floors", 2], ["basement", "f"], ["owner", "bob"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/houses/3
+Completed 302 Found in 27ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/houses/3" for 127.0.0.1 at 2018-10-10 19:23:37 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 19:23:45 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/3/edit" for 127.0.0.1 at 2018-10-10 19:23:50 -0400
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_form.html.erb (19.0ms)
+  Rendered houses/edit.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 65ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/houses/3" for 127.0.0.1 at 2018-10-10 19:23:53 -0400
+Processing by HousesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mYvjeY3NtZcaeDlIckydBj2mQkNKpHPgrLz2AYzzcokU4ra02JV04Itfan5lR/DtikWEht21gDdDKb0MZy44g==", "house"=>{"location"=>"there", "square_footage"=>"2240", "year"=>"1996", "style"=>"Apartment", "price"=>"110000", "floors"=>"2", "basement"=>"0", "owner"=>"bob"}, "commit"=>"Update House", "id"=>"3"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "houses" SET "style" = ? WHERE "houses"."id" = ?[0m  [["style", "Apartment"], ["id", 3]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/houses/3
+Completed 302 Found in 12ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/houses/3" for 127.0.0.1 at 2018-10-10 19:23:53 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 19:23:54 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/1" for 127.0.0.1 at 2018-10-10 19:23:57 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 39ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 19:23:59 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 28.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/houses/2" for 127.0.0.1 at 2018-10-10 19:24:00 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 19:24:01 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/3" for 127.0.0.1 at 2018-10-10 19:24:02 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 19:24:03 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:24:05 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 19:35:38 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 55ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:35:46 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 27.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 19:35:53 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/1" for 127.0.0.1 at 2018-10-10 19:35:54 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/new" for 127.0.0.1 at 2018-10-10 19:35:55 -0400
+Processing by InquiriesController#new as HTML
+Completed 406 Not Acceptable in 437ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (InquiriesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:186:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/rendering.rb:30:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/cache/ruby/2.4.0/gems/activerecord-5.1.6/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:124:in `process'
+vendor/cache/ruby/2.4.0/gems/actionview-5.1.6/lib/action_view/rendering.rb:30:in `process'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:844:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/etag.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/conditional_get.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/head.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/cache/ruby/2.4.0/gems/activerecord-5.1.6/lib/active_record/migration.rb:556:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:24:in `call'
+vendor/cache/ruby/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/engine.rb:522:in `call'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-10 19:36:05 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 19:39:48 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 58ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-10-10 19:39:52 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 50ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-10 19:40:03 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d1Qw3O3nuIvdY2kk4E5EzsK94xVXc+URprEr7hoQ6MOJsgvFIGpJwK1ejzH1iawc3E2tlI/77aCCbdu66Hs9jg==", "user"=>{"name"=>"test two", "email"=>"t2@email.com", "password"=>"[FILTERED]", "roles"=>"2"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "t2@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "test two"], ["email", "t2@email.com"], ["password_digest", "$2a$10$WSYl5khat8xXpUBuwVBhkuSag69ocDIIkD3k.F3Xmbcqi4Si/U0PK"], ["roles", 2.0], ["created_at", "2018-10-10 23:40:03.645870"], ["updated_at", "2018-10-10 23:40:03.645870"]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 69ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-10-10 19:40:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:40:05 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 36ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:40:16 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 19:40:19 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 47ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:40:35 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qHMPqaeVa0cvfgo9IzkZ0hl/l9f5qbC/DaE9T38b+VfA1Mrua64Nz1lkAchjDRrvXk9/Sn/o2yj0pPhk5Sxo1g==", "session"=>{"email"=>"t2@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "t2@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 57ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:40:35 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 26.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 19:40:45 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-10 19:40:50 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for InquiriesController):
+  
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:119:in `process'
+vendor/cache/ruby/2.4.0/gems/actionview-5.1.6/lib/action_view/rendering.rb:30:in `process'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:844:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/etag.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/conditional_get.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/head.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/cache/ruby/2.4.0/gems/activerecord-5.1.6/lib/active_record/migration.rb:556:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:24:in `call'
+vendor/cache/ruby/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/engine.rb:522:in `call'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/real_estate_companies" for 127.0.0.1 at 2018-10-10 19:40:52 -0400
+Processing by RealEstateCompaniesController#index as HTML
+  Rendering real_estate_companies/index.html.erb within layouts/application
+  Rendered real_estate_companies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 46ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 19:41:04 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-10 19:42:21 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 19:42:23 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 54ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 19:42:24 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 50ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:42:32 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fdUDjbH6/UUf2P/9VVnQxq4SgP72TL+il1mAu009P+4VcsbKfcGbzWnC9AgVbdP76SJoY3AN1DVuXEWQ1wqubw==", "session"=>{"email"=>"t2@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "t2@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 75ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 19:42:32 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 19:42:34 -0400
+Processing by HousesController#index as HTML
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 53ms (Views: 39.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/houses/1" for 127.0.0.1 at 2018-10-10 19:42:36 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries/new" for 127.0.0.1 at 2018-10-10 19:42:37 -0400
+Processing by InquiriesController#new as HTML
+Completed 406 Not Acceptable in 437ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (InquiriesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:186:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/rendering.rb:30:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/abstract_controller/callbacks.rb:19:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/rescue.rb:20:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `block in instrument'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/notifications.rb:166:in `instrument'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+vendor/cache/ruby/2.4.0/gems/activerecord-5.1.6/lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/abstract_controller/base.rb:124:in `process'
+vendor/cache/ruby/2.4.0/gems/actionview-5.1.6/lib/action_view/rendering.rb:30:in `process'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal.rb:189:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_controller/metal.rb:253:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:33:in `each'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/journey/router.rb:33:in `serve'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/routing/route_set.rb:844:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/etag.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/conditional_get.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/head.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:232:in `context'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/session/abstract/id.rb:226:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+vendor/cache/ruby/2.4.0/gems/activerecord-5.1.6/lib/active_record/migration.rb:556:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/callbacks.rb:97:in `run_callbacks'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/cache/ruby/2.4.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/rack/logger.rb:24:in `call'
+vendor/cache/ruby/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/method_override.rb:22:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/runtime.rb:22:in `call'
+vendor/cache/ruby/2.4.0/gems/activesupport-5.1.6/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/cache/ruby/2.4.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/cache/ruby/2.4.0/gems/rack-2.0.5/lib/rack/sendfile.rb:111:in `call'
+vendor/cache/ruby/2.4.0/gems/railties-5.1.6/lib/rails/engine.rb:522:in `call'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+vendor/cache/ruby/2.4.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'

@@ -1,6 +1,6 @@
 class HousesController < ApplicationController
   def house_params
-    params.require(:house).permit(:location, :square_footage, :year, :style, :price, :floors, :basement, :owner)
+    params.require(:house).permit(:location, :square_footage, :year, :style, :price, :floors, :basement, :owner, :realtor_id)
   end
 
   def new
@@ -14,7 +14,7 @@ class HousesController < ApplicationController
 
   def create
     @house = House.new(house_params)
-
+    @house.realtor_id = session[:user_id]
     respond_to do |format|
       if @house.save
         format.html { redirect_to @house, notice: 'User was successfully created.' }
@@ -55,6 +55,7 @@ class HousesController < ApplicationController
 
   def show
     @house = House.find(params[:id])
+    @user = User.find(session[:user_id])
 
     respond_to do |format|
       format.html # show.html.erb

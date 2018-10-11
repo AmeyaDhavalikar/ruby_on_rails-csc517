@@ -38,6 +38,6 @@
 <!-- If posting realtor -->
 <%= link_to 'Edit', edit_house_path(@house) %> |
 <!-- If house hunter -->
-<%= link_to 'Inquire about this House', new_inquiry_path %>
+<%= link_to 'Inquire about this House', new_inquiry_path if @user.roles != 1%>
 
 <%= link_to 'Back', houses_path %>

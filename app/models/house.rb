@@ -8,6 +8,6 @@ class House < ApplicationRecord
   validates :style, :presence => true
   validates :price, :presence => true, :numericality => true
   validates :floors, :presence => true
-  validates :basement, :presence => true
   validates :owner, :presence => true
+  validates :realtor_id, :presence => true
 end
