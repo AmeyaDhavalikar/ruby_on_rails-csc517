@@ -37,14 +37,19 @@ Rails.application.routes.draw do
   patch '/company/:id', to: 'real_estate_companies#update'
   delete '/company/:id', to: 'real_estate_companies#destroy'
 
+  get '/choose', to: 'users#choose'
+  post '/choose', to: 'users#update'
+  put '/choose', to: 'users#update'
+  patch '/choose', to: 'users#update'
+
   # House CRUD operations
-  #get '/listhouse', to: 'houses#new'
-  #post '/listhouse', to: 'houses#create'
-  #get '/houses', to: 'houses#show'
-  #get '/house/:id', to 'houses#edit'
-  #put '/house/:id', to: 'houses#update'
-  #patch '/house/:id', to: 'houses#update'
-  #delete '/house/:id', to: 'houses#destroy'
+  get '/listhouse', to: 'houses#new'
+  post '/listhouse', to: 'houses#create'
+  get '/houses', to: 'houses#show'
+  get '/house/:id', to: 'houses#edit'
+  put '/house/:id', to: 'houses#update'
+  patch '/house/:id', to: 'houses#update'
+  delete '/house/:id', to: 'houses#destroy'
 
   # Inquiry CRUD operations
   #get '/addinquiry', to: 'inquiries#new'

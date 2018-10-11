@@ -1,0 +1,14 @@
+<%= form_for @user do |f| %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <% options= options_from_collection_for_select(@real_estate_companies, 'id', 'name')%>
+    <%= f.select :company_id, options, include_blank: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Create a New Real Estate Company', new_real_estate_company_path %>

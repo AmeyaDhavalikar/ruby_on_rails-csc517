@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def user_params
-    params.require(:user).permit(:name, :email, :password, :roles)
+    params.require(:user).permit(:name, :email, :password, :roles, :company_id)
   end
 
   def index
@@ -50,6 +50,11 @@ class UsersController < ApplicationController
     else
       redirect_to home_path
     end
+  end
+
+  def choose
+    @real_estate_companies = RealEstateCompany.all
+    @user = User.find(session[:user_id])
   end
 
   def update

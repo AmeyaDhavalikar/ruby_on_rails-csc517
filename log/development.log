@@ -6507,3 +6507,1392 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 35ms (Views: 26.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 23:06:30 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 58ms (Views: 39.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-10-10 23:06:33 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:06:33 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 54ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 23:06:35 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 48ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2018-10-10 23:06:41 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LT4kU2QnkZ5lis7F6DtVGNc/Qgb0ZmtOLNhaurcAds1sGoUlGvZmAbIoUsObCnm78krRC2aB8vXUoGvhzluF6w==", "user"=>{"name"=>"Test One", "email"=>"test1@email.com", "password"=>"[FILTERED]", "roles"=>"1"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "test1@email.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$DfQVjWwrT8rL8.9f.4EF5.s7vxCphgUvoe5fuKtSVs.k06rS6DfNe"], ["updated_at", "2018-10-11 03:06:41.520024"], ["id", 1]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 67ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:06:41 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-10 23:06:43 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 23:06:43 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 23:06:44 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 23:06:47 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YCGK8HCb/MpoQ6KggzyEPYGEpB49rOiW2j8NP1t8/8sIhk+3vKCaQh5ZqVXDCIcAxrRMg7vtgwEjOsgUwUtuSg==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 56ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:06:48 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 23:06:49 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 48ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:06:51 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-10 23:06:52 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 23:06:52 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 23:06:53 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 23:06:57 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I/25QwcA7QfdzHGzISI5KXwf273j4qP4Z2J9JiPu3fpLWnwEyzuLj6vWekZhFjoUOy8zIGWjyG+eZ7gNudlMew==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 83ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 23:07:03 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 23:07:07 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J4zG0ukFfqCRgKkyrfHJsQr6HmrlWQWXASWqn5M+zJ9PKwOVJT4YKOeaosftxcqMTcr292MYbgD4IG+0CQldHg==", "session"=>{"email"=>"test2@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test2@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 57ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:07:07 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-10-10 23:07:13 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 48ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/2" for 127.0.0.1 at 2018-10-10 23:07:17 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uwC5EIXocNZWjWzkvdBOUUvShyqtZ3RXj/G6xwqHsUv6GoMWYX1GyY3PUhVqulJLJ2cDKqHTLlGm4H1BErrNgA==", "user"=>{"name"=>"Test Two", "email"=>"test2@email.com", "password"=>"[FILTERED]", "roles"=>"2"}, "commit"=>"Update User", "id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "test2@email.com"], ["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "users" SET "roles" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["roles", 2.0], ["updated_at", "2018-10-11 03:07:17.327394"], ["id", 2]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 11ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:07:17 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 36ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-10 23:07:22 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 23:07:22 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-10-10 23:07:23 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 47ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-10 23:07:36 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u4AVubs2+bVnciiNFTr5/cuwW+C8QDxcOnNuc/ouvjFFZi6gdrsI/hdPzpgA/REv1UAVYWTINO0er54nCEVrfA==", "user"=>{"name"=>"Test Four", "email"=>"test4@email.com", "password"=>"[FILTERED]", "roles"=>"2"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test4@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Test Four"], ["email", "test4@email.com"], ["password_digest", "$2a$10$qQZ.bzXx2Ql4Egz6iTH1L.F.1vnMrGPKUtLXgQ4xV/ZCo4DyRe/ia"], ["roles", 2.0], ["created_at", "2018-10-11 03:07:36.241695"], ["updated_at", "2018-10-11 03:07:36.241695"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 66ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 23:07:36 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 36ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 23:07:37 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 23:07:48 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gTFDlw1OKHcwHLOC+NF0ZQJMezOPhReKWyegzLBwOXHplobQwXVO/0YGuHe45XdYRXyTrgnEfB2iImXnKkeo8A==", "session"=>{"email"=>"test4@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test4@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 56ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:07:48 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-10 23:07:50 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 23:07:50 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 23:07:51 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 23:07:57 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ay580QhZaNnXDg/cC26jsGdAphUugDF9mfuMfRbqDsFribmWxGIOUaEUBClLWqCNIHBOiKjBWupg/klWjN2fQA==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 85ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 23:08:02 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U05FsWG5NgXfIao7XEMDcuwR+yJnMDkv4NkvPqHr1/076YD2rYJQjak7oc4cdwBPqyETv+FxUrgZ3OoVO9xGfA==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 57ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:08:02 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 23:08:04 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 48ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2018-10-10 23:08:09 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CiCb/bugpJjwNDqzdGbxPSav5x7WNw00OrlpG0iKopNLBDqLxXFTByeWprUHV92eA9p0E0TQlI/CwVhAMdFRtQ==", "user"=>{"name"=>"Test One", "email"=>"test1@email.com", "password"=>"[FILTERED]", "roles"=>"1"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "test1@email.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$vTz1mdd8tk946UpcYhS7Au/e/Hgd5cNYzAHweQsY.69j2CjTC6rbG"], ["updated_at", "2018-10-11 03:08:09.827731"], ["id", 1]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 67ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:08:09 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 23:08:43 -0400
+Processing by HousesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (6.0ms)
+  Rendered houses/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 82ms (Views: 44.7ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 23:08:58 -0400
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7rwaivhbxwDOiHcUsARZptpZPzACpMIRZvIV6ZBg5FwgQlF5Ur8M7zOifFJ0Ox6Uw7tX5xupoVKkHg67u1rHg==", "house"=>{"location"=>"there", "square_footage"=>"3500", "year"=>"11111", "style"=>"Single Family House", "price"=>"12", "floors"=>"3", "basement"=>"1", "owner"=>"h"}, "commit"=>"Create House"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (3.0ms)
+  Rendered houses/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 23:09:02 -0400
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KPty8Ww59xP2r4C655lXZQbDYIcYUKTnaYKhBgOS2GxPwIveopJkPElbKJf8iap5zqTpJEQ0kWpmiRFrSz4w4w==", "house"=>{"location"=>"there", "square_footage"=>"3500", "year"=>"1111", "style"=>"Single Family House", "price"=>"12", "floors"=>"3", "basement"=>"1", "owner"=>"h"}, "commit"=>"Create House"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "houses" ("realtor_id", "location", "square_footage", "year", "style", "price", "floors", "basement", "owner") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["realtor_id", 1], ["location", "there"], ["square_footage", "3500"], ["year", 1111], ["style", "Single Family House"], ["price", 12], ["floors", 3], ["basement", "t"], ["owner", "h"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/houses/1
+Completed 302 Found in 12ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/houses/1" for 127.0.0.1 at 2018-10-10 23:09:02 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 38ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 23:09:07 -0400
+Processing by HousesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/houses/1" for 127.0.0.1 at 2018-10-10 23:09:09 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 23:09:10 -0400
+Processing by HousesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 39ms (Views: 27.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:13:03 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-10 23:13:20 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 23:13:20 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 36ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 23:13:20 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 23:13:25 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PIIdGuHkBr4NQJxBawlxPRsPlnwJMVO0+x+TJr+6HApUJdhdLd9gNntal7QrPXIAXD9+4Y9wOCMCGlYNJY2Niw==", "session"=>{"email"=>"test3@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test3@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 56ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:13:25 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 23:13:28 -0400
+Processing by HousesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/1" for 127.0.0.1 at 2018-10-10 23:13:30 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 23:13:35 -0400
+Processing by HousesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 27.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 23:13:36 -0400
+Processing by HousesController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (3.0ms)
+  Rendered houses/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 50ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/houses" for 127.0.0.1 at 2018-10-10 23:13:50 -0400
+Processing by HousesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yj5NJG12u0JPtQWplcJEm3AvZK31aQz5uTxWClkVPJcFBbQLo90obfBBrYSO0rmHuEjtDqkNOXS2N+ZnEbnUGA==", "house"=>{"location"=>"here", "square_footage"=>"12", "year"=>"4444", "style"=>"Single Family House", "price"=>"6", "floors"=>"2", "basement"=>"0", "owner"=>"yes"}, "commit"=>"Create House"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "houses" ("realtor_id", "location", "square_footage", "year", "style", "price", "floors", "basement", "owner") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["realtor_id", 3], ["location", "here"], ["square_footage", "12"], ["year", 4444], ["style", "Single Family House"], ["price", 6], ["floors", 2], ["basement", "f"], ["owner", "yes"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/houses/2
+Completed 302 Found in 11ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/houses/2" for 127.0.0.1 at 2018-10-10 23:13:50 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/houses/2/edit" for 127.0.0.1 at 2018-10-10 23:13:51 -0400
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_form.html.erb (3.0ms)
+  Rendered houses/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 51ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/1/edit" for 127.0.0.1 at 2018-10-10 23:13:56 -0400
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_form.html.erb (2.0ms)
+  Rendered houses/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 49ms (Views: 38.6ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/houses/1" for 127.0.0.1 at 2018-10-10 23:14:02 -0400
+Processing by HousesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S9q0dS7XR5d/Tlx+fQ8AV1fl3J0T2p/Y/AMIxIFURZWInyI/AVP6jwT6bR3z6xI68cFgPTOqpF67sKPaAudgpA==", "house"=>{"location"=>"there", "square_footage"=>"3500", "year"=>"1111", "style"=>"Single Family House", "price"=>"12", "floors"=>"3", "basement"=>"1", "owner"=>"he"}, "commit"=>"Update House", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+No template found for HousesController#update, rendering head :no_content
+Completed 204 No Content in 445ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 23:14:08 -0400
+Processing by HousesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 26.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/houses/1" for 127.0.0.1 at 2018-10-10 23:14:09 -0400
+Processing by HousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/show.html.erb within layouts/application
+  Rendered houses/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 23:14:11 -0400
+Processing by HousesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/2/edit" for 127.0.0.1 at 2018-10-10 23:14:14 -0400
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_form.html.erb (3.0ms)
+  Rendered houses/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 48ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/1/edit" for 127.0.0.1 at 2018-10-10 23:14:18 -0400
+Processing by HousesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHouse Load (0.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/edit.html.erb within layouts/application
+  Rendered houses/_form.html.erb (4.0ms)
+  Rendered houses/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 50ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/houses/1" for 127.0.0.1 at 2018-10-10 23:14:22 -0400
+Processing by HousesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"obMSVRlo/a3vDMTbk7c6vhnyB3Urp7jkmuRB4hXn691i9oQfNuxAtZS49bgdUyjTv9a71QvXg2LdV+r8llTO7A==", "house"=>{"location"=>"there", "square_footage"=>"35000", "year"=>"1111", "style"=>"Single Family House", "price"=>"12", "floors"=>"3", "basement"=>"1", "owner"=>"h"}, "commit"=>"Update House", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+No template found for HousesController#update, rendering head :no_content
+Completed 204 No Content in 449ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/houses" for 127.0.0.1 at 2018-10-10 23:14:26 -0400
+Processing by HousesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering houses/index.html.erb within layouts/application
+  [1m[36mHouse Load (1.0ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  Rendered houses/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 27.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:14:29 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2018-10-10 23:14:52 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 69ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-10 23:14:55 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:14:55 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2018-10-10 23:14:57 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 48ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-10-10 23:15:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:15:04 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 26.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-10 23:15:12 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 23:15:12 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-10 23:51:46 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 63ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 23:51:48 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 115ms (Views: 91.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 23:51:53 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dlz+vUPR4DSXeLlS+sQFDleuwVEk+tNMfN1uht6KLvEe+zv6j+qGvOFisqe68AYzEJ4pzKK7uNuF2KutRL2/cA==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 82ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:51:53 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/choose" for 127.0.0.1 at 2018-10-10 23:51:56 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (1.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 48ms (Views: 31.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/choose" for 127.0.0.1 at 2018-10-10 23:52:05 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/choose" for 127.0.0.1 at 2018-10-10 23:52:42 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 46ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/real_estate_companies/new" for 127.0.0.1 at 2018-10-10 23:52:43 -0400
+Processing by RealEstateCompaniesController#new as HTML
+  Rendering real_estate_companies/new.html.erb within layouts/application
+  Rendered real_estate_companies/_form.html.erb (17.0ms)
+  Rendered real_estate_companies/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 85ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/real_estate_companies" for 127.0.0.1 at 2018-10-10 23:53:14 -0400
+Processing by RealEstateCompaniesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9/0xYVFnk2FJih5Pwfz1u9WtjRwfYVRO4wIsZw/czK4rbTGdzElM38mm8ZMkHaZReUSatZw3Ef383XY0IJwtsA==", "real_estate_company"=>{"name"=>"Billy Bob's Mountains", "website"=>"https://bbms.com", "address"=>"5 Bob's Mountain", "size"=>"0", "founded"=>"2018", "revenue"=>"100", "synopsis"=>"we like to sell mountains"}, "commit"=>"Create Real estate company"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "real_estate_companies" ("name", "website", "address", "size", "founded", "revenue", "synopsis", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Billy Bob's Mountains"], ["website", "https://bbms.com"], ["address", "5 Bob's Mountain"], ["size", "0"], ["founded", 2018.0], ["revenue", "100"], ["synopsis", "we like to sell mountains"], ["created_at", "2018-10-11 03:53:14.974634"], ["updated_at", "2018-10-11 03:53:14.974634"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/real_estate_companies/1
+Completed 302 Found in 18ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/real_estate_companies/1" for 127.0.0.1 at 2018-10-10 23:53:15 -0400
+Processing by RealEstateCompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRealEstateCompany Load (1.0ms)[0m  [1m[34mSELECT  "real_estate_companies".* FROM "real_estate_companies" WHERE "real_estate_companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering real_estate_companies/show.html.erb within layouts/application
+  Rendered real_estate_companies/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 45ms (Views: 27.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/real_estate_companies" for 127.0.0.1 at 2018-10-10 23:53:20 -0400
+Processing by RealEstateCompaniesController#index as HTML
+  Rendering real_estate_companies/index.html.erb within layouts/application
+  Rendered real_estate_companies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/real_estate_companies/new" for 127.0.0.1 at 2018-10-10 23:53:48 -0400
+Processing by RealEstateCompaniesController#new as HTML
+  Rendering real_estate_companies/new.html.erb within layouts/application
+  Rendered real_estate_companies/_form.html.erb (5.0ms)
+  Rendered real_estate_companies/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 58ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:53:50 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/choose" for 127.0.0.1 at 2018-10-10 23:53:53 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2018-10-10 23:53:55 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OEVqQoHHhmYv4hdj9RYMRAiQ1K79BjE0pnKilKjzzD95Ycs0/xZx+fhAi2WGJyDnLeVHo2/hqI9eCpPP0ag/GQ==", "user"=>{"company_id"=>"1"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "test1@email.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "company_id" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["company_id", 1], ["updated_at", "2018-10-11 03:53:55.911540"], ["id", 1]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 18ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:53:55 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 30.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 23:55:49 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:19: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+_id != 0 && @user.roles != 2 );@output_buffer.safe_append='
+                              ^
+C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:24: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );@output_buffer.safe_append=
+                              ^
+C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/users/show.html.erb:19: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/users/show.html.erb:24: syntax error, unexpected keyword_end
+app/views/users/show.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/show.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 23:56:33 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:19: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+_id != 0 && @user.roles != 2 );@output_buffer.safe_append='
+                              ^
+C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:23: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );@output_buffer.safe_append=
+                              ^
+C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/users/show.html.erb:19: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/users/show.html.erb:23: syntax error, unexpected keyword_end
+app/views/users/show.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/show.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 23:56:54 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:19: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+_id != 0 && @user.roles != 2 );@output_buffer.safe_append='
+                              ^
+C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:23: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );@output_buffer.safe_append=
+                              ^
+C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/show.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/users/show.html.erb:19: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/users/show.html.erb:23: syntax error, unexpected keyword_end
+app/views/users/show.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/show.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 23:57:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:57:14 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 53ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/choose" for 127.0.0.1 at 2018-10-10 23:57:15 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/real_estate_companies/new" for 127.0.0.1 at 2018-10-10 23:57:16 -0400
+Processing by RealEstateCompaniesController#new as HTML
+  Rendering real_estate_companies/new.html.erb within layouts/application
+  Rendered real_estate_companies/_form.html.erb (2.0ms)
+  Rendered real_estate_companies/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 58ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/real_estate_companies" for 127.0.0.1 at 2018-10-10 23:57:48 -0400
+Processing by RealEstateCompaniesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D6zQUrsibM9dF5LPZ3aRUpcOUQkkE7QJ1Z4zvNFGPuLTPNCuJgyzcd07fROCl8K4O+dGoKdF8brKQWnv/gbf/A==", "real_estate_company"=>{"name"=>"Billy Bob's Trash Cans", "website"=>"https://bbts.com", "address"=>"444 Cans", "size"=>"0", "founded"=>"2018", "revenue"=>"1", "synopsis"=>"We sell trash cans and the land they're on"}, "commit"=>"Create Real estate company"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "real_estate_companies" ("name", "website", "address", "size", "founded", "revenue", "synopsis", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Billy Bob's Trash Cans"], ["website", "https://bbts.com"], ["address", "444 Cans"], ["size", "0"], ["founded", 2018.0], ["revenue", "1"], ["synopsis", "We sell trash cans and the land they're on"], ["created_at", "2018-10-11 03:57:48.778136"], ["updated_at", "2018-10-11 03:57:48.778136"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/real_estate_companies/2
+Completed 302 Found in 13ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/real_estate_companies/2" for 127.0.0.1 at 2018-10-10 23:57:48 -0400
+Processing by RealEstateCompaniesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT  "real_estate_companies".* FROM "real_estate_companies" WHERE "real_estate_companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering real_estate_companies/show.html.erb within layouts/application
+  Rendered real_estate_companies/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 45ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/real_estate_companies" for 127.0.0.1 at 2018-10-10 23:57:50 -0400
+Processing by RealEstateCompaniesController#index as HTML
+  Rendering real_estate_companies/index.html.erb within layouts/application
+  Rendered real_estate_companies/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/real_estate_companies/new" for 127.0.0.1 at 2018-10-10 23:57:55 -0400
+Processing by RealEstateCompaniesController#new as HTML
+  Rendering real_estate_companies/new.html.erb within layouts/application
+  Rendered real_estate_companies/_form.html.erb (3.0ms)
+  Rendered real_estate_companies/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 46ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:57:57 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/choose" for 127.0.0.1 at 2018-10-10 23:58:11 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2018-10-10 23:58:14 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Wv2SyGlJ4Bh4e+jcqaiw/nCQrBFzTF+BH8aC5dqc8y8T1c9X3TQH7ZDc6UBl45g3LfRvdcqqMX8BytQ7jGA6g==", "user"=>{"company_id"=>"2"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "test1@email.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "company_id" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["company_id", 2], ["updated_at", "2018-10-11 03:58:14.332437"], ["id", 1]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 12ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:58:14 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 23:58:15 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-10 23:58:26 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 24.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/choose" for 127.0.0.1 at 2018-10-10 23:58:28 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/choose" for 127.0.0.1 at 2018-10-10 23:59:30 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  Rendered users/choose.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/choose.html.erb:6: syntax error, unexpected ':', expecting ')'
+.select :company_id, options :include_blank => true );@outpu
+                              ^):
+  
+app/views/users/choose.html.erb:6: syntax error, unexpected ':', expecting ')'
+Started GET "/choose" for 127.0.0.1 at 2018-10-11 00:00:52 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of ActiveSupport::SafeBuffer into Array):
+    3:   <div class="field">
+    4:     <%= f.label :company_id %><br />
+    5:     <% options= options_from_collection_for_select(@real_estate_companies, 'id', 'name')%>
+    6:     <%= f.select :company_id, [['', 0]] + options %>
+    7:   </div>
+    8: 
+    9:   <div class="actions">
+  
+app/views/users/choose.html.erb:6:in `block in _app_views_users_choose_html_erb__233550425_88507840'
+app/views/users/choose.html.erb:1:in `_app_views_users_choose_html_erb__233550425_88507840'
+Started GET "/choose" for 127.0.0.1 at 2018-10-11 00:01:08 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of ActiveSupport::SafeBuffer into Array):
+    3:   <div class="field">
+    4:     <%= f.label :company_id %><br />
+    5:     <% options= options_from_collection_for_select(@real_estate_companies, 'id', 'name')%>
+    6:     <%= f.select :company_id, [['', 0]] + options %>
+    7:   </div>
+    8: 
+    9:   <div class="actions">
+  
+app/views/users/choose.html.erb:6:in `block in _app_views_users_choose_html_erb__233550425_87117040'
+app/views/users/choose.html.erb:1:in `_app_views_users_choose_html_erb__233550425_87117040'
+Started GET "/choose" for 127.0.0.1 at 2018-10-11 00:02:20 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  Rendered users/choose.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/Sam/Documents/ruby_on_rails-csc517/app/views/users/choose.html.erb:6: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+ny_id, options  include_blank: true );@output_buffer.safe_ap
+                              ^):
+  
+app/views/users/choose.html.erb:6: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+Started GET "/choose" for 127.0.0.1 at 2018-10-11 00:02:44 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2018-10-11 00:02:47 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QTxYgJX/2MiTQKBYB6wgrfpf2eveI8f0cZPLFCnDoQkAGPn26y4vV0TiPF50nQwO3ypK5kzEXk+J6/pPUJhSLw==", "user"=>{"company_id"=>""}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "test1@email.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "company_id" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["company_id", nil], ["updated_at", "2018-10-11 04:02:47.880786"], ["id", 1]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 11ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:02:47 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-11 00:02:51 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 34ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:02:57 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/choose" for 127.0.0.1 at 2018-10-11 00:02:59 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2018-10-11 00:03:01 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YUMp+urBrWqQmotwNAImYg+ASdHyiYxZAOlarORRqocgZ4iMlBBa9Uc4F3ZHMwrBKvXa3GBuFeL4kWv3nQpZoQ==", "user"=>{"company_id"=>"2"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "test1@email.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "company_id" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["company_id", 2], ["updated_at", "2018-10-11 04:03:01.673969"], ["id", 1]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 12ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:03:01 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-11 00:03:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 25.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:03:05 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/choose" for 127.0.0.1 at 2018-10-11 00:03:17 -0400
+Processing by UsersController#choose as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/choose.html.erb within layouts/application
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT "real_estate_companies".* FROM "real_estate_companies"[0m
+  Rendered users/choose.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:04:55 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:05:01 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:05:06 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-11 00:05:09 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 36ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:05:10 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/real_estate_companies/2/edit" for 127.0.0.1 at 2018-10-11 00:05:11 -0400
+Processing by RealEstateCompaniesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT  "real_estate_companies".* FROM "real_estate_companies" WHERE "real_estate_companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering real_estate_companies/edit.html.erb within layouts/application
+  Rendered real_estate_companies/_form.html.erb (3.0ms)
+  Rendered real_estate_companies/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 53ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/real_estate_companies/2" for 127.0.0.1 at 2018-10-11 00:05:47 -0400
+Processing by RealEstateCompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dMT7459897mV1VR215e7YIwEdEYxCGJLtwHG27QUmtyqcjPrjLDStpT4nns6HYRjV9hlZPLDNCuagdxhvM7xJQ==", "real_estate_company"=>{"name"=>"Billy Bob's Trash Cans", "website"=>"https://bbts.com", "address"=>"444 Cans", "size"=>"0", "founded"=>"2018.0", "revenue"=>"1", "synopsis"=>"We sell trash cans and the land they're on goodly"}, "commit"=>"Update Real estate company", "id"=>"2"}
+  [1m[36mRealEstateCompany Load (1.0ms)[0m  [1m[34mSELECT  "real_estate_companies".* FROM "real_estate_companies" WHERE "real_estate_companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "real_estate_companies" SET "synopsis" = ?, "updated_at" = ? WHERE "real_estate_companies"."id" = ?[0m  [["synopsis", "We sell trash cans and the land they're on goodly"], ["updated_at", "2018-10-11 04:05:47.250304"], ["id", 2]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/real_estate_companies/2
+Completed 302 Found in 15ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/real_estate_companies/2" for 127.0.0.1 at 2018-10-11 00:05:47 -0400
+Processing by RealEstateCompaniesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRealEstateCompany Load (0.0ms)[0m  [1m[34mSELECT  "real_estate_companies".* FROM "real_estate_companies" WHERE "real_estate_companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering real_estate_companies/show.html.erb within layouts/application
+  Rendered real_estate_companies/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:05:49 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 24.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-11 00:05:51 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:05:52 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-11 00:05:54 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-11 00:05:54 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 39ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-11 00:07:27 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 111ms (Views: 87.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-11 00:07:33 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YdCvBMoSGRWqNcUGESE/B0q2CJKGfvAfgxVnqpyhzTUJd2pDBil/ndwvzvNRFTw6DYbgDwA/m4h6EKKBBpZctA==", "session"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 83ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:07:33 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-11 00:07:35 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:07:36 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-10-11 00:07:38 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.0ms)
+  Rendered users/edit.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 65ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2018-10-11 00:07:41 -0400
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6NvRRj6zLexl8GdsqklTgrmfqISxWAulE4l9V/4VcJep/3AwQGLac7JS+2rZeH8hnOo7iSO/kh7r8UwMh06DsQ==", "user"=>{"name"=>"Test One", "email"=>"test1@email.com", "password"=>"[FILTERED]", "roles"=>"2"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "test1@email.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "roles" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["roles", 2.0], ["updated_at", "2018-10-11 04:07:41.396890"], ["id", 1]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 18ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:07:41 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-11 00:07:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-10-11 00:07:49 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
