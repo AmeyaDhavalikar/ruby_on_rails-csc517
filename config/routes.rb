@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   # Session CD operations
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
   get '/test', to: 'sessions#test'
 
   # Real Estate CRUD operations
