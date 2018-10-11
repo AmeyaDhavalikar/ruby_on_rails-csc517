@@ -17,7 +17,7 @@ class RealEstateCompaniesController < ApplicationController
 
     respond_to do |format|
       if @real_estate_company.save
-        format.html { redirect_to @real_estate_company, notice: 'User was successfully created.' }
+        format.html { redirect_to @real_estate_company, notice: 'Company was successfully created.' }
         format.json { render json: @real_estate_company, status: :created, location: @real_estate_company }
       else
         format.html { render action: "new" }
