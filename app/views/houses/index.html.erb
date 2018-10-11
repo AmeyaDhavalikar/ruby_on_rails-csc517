@@ -20,7 +20,7 @@
         <td><%= house.square_footage %></td>
         <td><%= link_to 'Show', house %></td>
         <td><%= link_to 'Edit', edit_house_path(house) if @user.roles != 2 && @user.id == house.realtor_id %></td>
-        <td><%= link_to 'Remove Listing',  %></td>
+        <td><%= link_to 'Remove Listing',  house, method: :delete, data: {confirm: 'Are you sure?'} if @user.roles != 2 && @user.id == house.realtor_id%></td>
       </tr>
     <% end %>
     </tbody>

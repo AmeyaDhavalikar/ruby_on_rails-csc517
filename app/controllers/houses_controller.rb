@@ -71,8 +71,9 @@ class HousesController < ApplicationController
   end
 
   def destroy
-    if User.find(session[:user_id]).roles != 2
-      @house = House.find(params[:id])
+    @user = User.find(session[:user_id])
+    @house = @house = House.find(params[:id])
+    if @user.roles != 2 && @user.id == @house.realtor_id
       @house.destroy
 
       respond_to do |format|

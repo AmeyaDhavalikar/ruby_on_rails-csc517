@@ -45,11 +45,15 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    if params[:id].to_s == session[:user_id].to_s
+      @user = User.find(params[:id])
+    else
+      redirect_to home_path
+    end
   end
 
   def update
-    if User.find(session[:user_id]).id == :id
+    if params[:id].to_s == session[:user_id].to_s
       @user = User.find(params[:id])
 
       respond_to do |format|
@@ -61,6 +65,8 @@ class UsersController < ApplicationController
           format.json { render json: @user.errors, status: :unprocessable_entity }
         end
       end
+    else
+      redirect_to home_path
     end
   end
 
