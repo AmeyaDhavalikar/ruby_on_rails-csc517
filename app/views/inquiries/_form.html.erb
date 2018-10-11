@@ -1,0 +1,52 @@
+<%= form_for @real_estate_company do |f| %>
+  <% if @real_estate_company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@real_estate_company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+        <% @real_estate_company.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.url_field :website %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="size">
+    <%= f.label :size %><br />
+    <%= f.select :size, [['1-50', 0], ['51-200', 1], ['201-500', 2], ['501-1000', 3], ['1000+', 4]] %>
+  </div>
+
+  <div class="founded">
+    <%= f.label :founded %><br />
+    <%= f.number_field :founded %>
+  </div>
+
+  <div class="Revenue">
+    <%= f.label :revenue %><br />
+    <%= f.number_field :revenue %>
+  </div>
+
+  <div class="Synopsis">
+    <%= f.label :synopsis %><br />
+    <%= f.text_area :synopsis %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
