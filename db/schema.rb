@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180930205850) do
     t.integer "house_id"
     t.integer "user_id"
     t.string "subject"
+    t.string "message"
   end
 
   create_table "real_estate_companies", force: :cascade do |t|

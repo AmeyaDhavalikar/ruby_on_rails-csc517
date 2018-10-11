@@ -13,15 +13,19 @@ class RealEstateCompaniesController < ApplicationController
   end
 
   def create
-    @real_estate_company = RealEstateCompany.new(real_estate_company_params)
+    @user = User.find(session[:user_id])
+    puts @user.roles
+    if @user.roles != 2
+      @real_estate_company = RealEstateCompany.new(real_estate_company_params)
 
-    respond_to do |format|
-      if @real_estate_company.save
-        format.html { redirect_to @real_estate_company, notice: 'User was successfully created.' }
-        format.json { render json: @real_estate_company, status: :created, location: @real_estate_company }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @real_estate_company.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @real_estate_company.save
+          format.html { redirect_to home_path, notice: 'User was successfully created.' }
+          format.json { render json: @real_estate_company, status: :created, location: @real_estate_company }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @real_estate_company.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -35,7 +39,7 @@ class RealEstateCompaniesController < ApplicationController
 
     respond_to do |format|
       if @real_estate_company.update_attributes(real_estate_company_params)
-        format.html { redirect_to @real_estate_company, notice: 'Company was successfully updated.' }
+        format.html { redirect_to home_path, notice: 'Company was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

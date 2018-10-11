@@ -4,5 +4,5 @@ class Inquiry < ApplicationRecord
   #belongs_to :user
 
   validates :subject, :presence => true
-  validates :message_content, :presence => true
+  validates :message, :presence => true
 end

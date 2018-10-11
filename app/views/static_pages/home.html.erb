@@ -1,4 +1,5 @@
 Welcome to the Real Estate Manager,<%= @user.name %><br />
+<p id="notice"><%= notice %></p>
 <%= link_to "Edit Your Profile", edit_user_path(@user) %><br />
 <%= link_to "View Your Profile", @user %><br />
 <%= link_to "Log Out", '/logout' %><br />
@@ -6,7 +7,7 @@ Welcome to the Real Estate Manager,<%= @user.name %><br />
 <%= link_to "List House", new_house_path  if @user.roles != 2 %><br />
 <%= link_to "View Inquiries on Your Company's Houses", inquiries_path if @user.roles != 2 %><br />
 <%= link_to "Select Your Real Estate Company", '/choose' if @user.roles != 2 %><br />
-<%= link_to "Edit Your Company's Information", edit_real_estate_company_path(@user.company_id) if @user.roles != 2 && @user.company_id != 0 %><br />
+<%= link_to "Edit Your Company's Information", edit_real_estate_company_path(@real_estate_company) if @user.roles != 2 && @real_estate_company %><br />
 <%= link_to "View Listed Houses", houses_path if @user.roles != 2 %><br />
 <!-- if house hunter -->
 <%= link_to "Browse Houses", houses_path if @user.roles != 1%><br />

@@ -13,12 +13,13 @@ class HousesController < ApplicationController
   end
 
   def create
-    if User.find(session[:user_id]).roles != 2
+    @user = User.find(session[:user_id])
+    if @user.roles != 2 && !@user.company_id.nil?
       @house = House.new(house_params)
       @house.realtor_id = session[:user_id]
       respond_to do |format|
         if @house.save
-          format.html { redirect_to @house, notice: 'User was successfully created.' }
+          format.html { redirect_to @house, notice: 'House was successfully listed.' }
           format.json { render json: @house, status: :created, location: @house }
         else
           format.html { render action: "new" }
@@ -40,7 +41,7 @@ class HousesController < ApplicationController
 
       respond_to do |format|
         if @house.update_attributes(house_params)
-          format.html { redirect_to @house, notice: 'Company was successfully updated.' }
+          format.html { redirect_to @house, notice: 'House was successfully updated.' }
           format.json { head :no_content }
         else
           format.html { render action: "edit" }

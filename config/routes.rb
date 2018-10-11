@@ -52,8 +52,8 @@ Rails.application.routes.draw do
   delete '/house/:id', to: 'houses#destroy'
 
   # Inquiry CRUD operations
-  #get '/addinquiry', to: 'inquiries#new'
-  #post '/addinquiry', to: 'inquiries#create'
+  #get '/addinquiry/:id', to: 'inquiries#new'
+  #post '/addinquiry/:id', to: 'inquiries#create'
   #get '/inquiries', to: 'inquiries#show'
   #get '/inquiry/:id', to: 'inquiries#edit'
   #put '/inquiry/:id', to: 'inquiries#update'

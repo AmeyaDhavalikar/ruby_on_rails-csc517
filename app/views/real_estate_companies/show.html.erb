@@ -1,40 +1,33 @@
-<p id="notice"><%= notice %></p>
-
+<h1>View Real Estate Company</h1>
 <p>
   <b>Name:</b>
   <%= @real_estate_company.name %>
 </p>
 
 <p>
-  <b>Website URL:</b>
+  <b>Website:</b>
   <%= @real_estate_company.website %>
 </p>
 
 <p>
-  <b>Address:</b>
-  <%= @real_estate_company.address %>
+  <b>Location:</b>
+  <%= @real_estate_company.address%>
 </p>
-
 <p>
   <b>Size:</b>
-  <%= @real_estate_company.size %>
+  <%= @real_estate_company.size%>
 </p>
-
 <p>
-  <b>Founded:</b>
-  <%= @real_estate_company.founded %>
+  <b>Year Founded:</b>
+  <%= @real_estate_company.founded%>
 </p>
-
 <p>
   <b>Revenue:</b>
-  <%= @real_estate_company.revenue %>
+  <%= @real_estate_company.revenue%>
 </p>
-
 <p>
-  <b>Synopsis:</b>
-  <%= @real_estate_company.synopsis %>
+  <b>Description:</b>
+  <%= @real_estate_company.synopsis%>
 </p>
 
-
-<%= link_to 'Edit', edit_real_estate_company_path(@real_estate_company) %> |
 <%= link_to 'Back', home_path %>

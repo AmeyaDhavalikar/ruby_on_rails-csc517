@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <b>Location:</b>
   <%= @house.location %>
@@ -36,5 +35,5 @@
 </p>
 
 <%= link_to 'Edit', edit_house_path(@house) if @user.roles != 2 && @user.id == @house.realtor_id %> |
-<%= link_to 'Inquire about this House', new_inquiry_path if @user.roles != 1%> |
+<%= link_to 'Inquire about this House', new_inquiry_path(@house) if @user.roles != 1%> |
 <%= link_to 'Back', houses_path %>
