@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to root_path, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
@@ -49,27 +49,30 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
+    if User.find(session[:user_id]).id == :id
+      @user = User.find(params[:id])
 
-    respond_to do |format|
-      if @user.update_attributes(user_params)
-        format.html { redirect_to '/home', notice: 'User was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @user.update_attributes(user_params)
+          format.html { redirect_to '/home', notice: 'User was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
 
   def destroy
-    @user = User.find(params[:id])
-    @user.destroy
+    if User.find(session[:user_id]).id == :id
+      @user = User.find(params[:id])
+      @user.destroy
 
-    respond_to do |format|
-      format.html { redirect_to users_url }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to users_url }
+        format.json { head :no_content }
+      end
     end
   end
-
 end
