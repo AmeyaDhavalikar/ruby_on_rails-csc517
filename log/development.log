@@ -1,0 +1,801 @@
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "houses"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "houses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_id" integer, "realtor_id" integer, "location" varchar, "square_footage" varchar, "year" integer, "style" varchar, "price" integer, "floors" integer, "basement" boolean, "owner" varchar)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "inquiries"[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "inquiries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "house_id" integer, "user_id" integer, "subject" varchar)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "real_estate_companies"[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "real_estate_companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "website" varchar, "address" varchar, "size" varchar, "founded" decimal, "revenue" varchar, "synopsis" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_id" integer, "name" varchar, "email" varchar, "password_digest" varchar, "roles" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180930205850)[0m
+  [1m[35m (6.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180930202409);
+
+[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-10 21:12:56.168567"], ["updated_at", "2018-10-10 21:12:56.168567"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-10-10 17:14:24 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 195ms (Views: 166.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 17:14:29 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 144ms (Views: 112.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-10-10 17:14:30 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.0ms)
+  Rendered users/new.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 156ms (Views: 116.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-10 17:14:44 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lo5RKNa4UnxYJXk51kn4kt6O44zhAUlO7pr2nCOPQi5ahblDpVJS8YckEto6Rmt198n7Lb4iRQvYF7CfNWRQRA==", "user"=>{"name"=>"Ameya", "email"=>"realtor@realtor.com", "password"=>"[FILTERED]", "roles"=>"1"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "realtor@realtor.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ameya"], ["email", "realtor@realtor.com"], ["password_digest", "$2a$10$2ataShU.73vQ7XtBhpr2fu96PfFzeW1sd2S.x5oirwpRoVZKJKPmW"], ["roles", 1.0], ["created_at", "2018-10-10 21:14:44.938358"], ["updated_at", "2018-10-10 21:14:44.938358"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 135ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-10-10 17:14:44 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 286ms (Views: 181.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-10 17:14:47 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 238ms (Views: 176.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 17:17:27 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 352ms (Views: 251.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 17:17:33 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tPUJCOklaRFIjp9MwPEowhU3X2VbYYRJxKHpZuiIpyOUi0qaAOb24u7fusv+Knk+zTFDHwWjhPXU6vC1k2/RjA==", "session"=>{"email"=>"realtor@realtor.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "realtor@realtor.com"], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 133ms (Views: 81.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/real_estate_companies" for 127.0.0.1 at 2018-10-10 17:18:16 -0400
+Processing by RealEstateCompaniesController#index as HTML
+  Rendering real_estate_companies/index.html.erb within layouts/application
+  Rendered real_estate_companies/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 290ms (Views: 192.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/houses/new" for 127.0.0.1 at 2018-10-10 17:18:22 -0400
+Processing by HousesController#new as HTML
+  Rendering houses/new.html.erb within layouts/application
+  Rendered houses/_form.html.erb (37.0ms)
+  Rendered houses/new.html.erb within layouts/application (100.8ms)
+Completed 200 OK in 384ms (Views: 307.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-10 17:18:39 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for InquiriesController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/real_estate_companies" for 127.0.0.1 at 2018-10-10 17:23:00 -0400
+Processing by RealEstateCompaniesController#index as HTML
+  Rendering real_estate_companies/index.html.erb within layouts/application
+  Rendered real_estate_companies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 250ms (Views: 183.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-10 17:24:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-10 19:47:44 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 205ms (Views: 147.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 19:47:50 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 142ms (Views: 114.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:47:58 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/3opcskX2fRn94nzgI9Q7J4jRNmZtDJvtwBfPrmYzXTfBGrgINRGB8GmrHS+VAEQRiVYo8d2MtOnS0btwn+72w==", "session"=>{"email"=>"hunter@hunter.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunter@hunter.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 219ms (Views: 194.5ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:48:00 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ddZ04NaPiESQARAW0sAoblo4crwSOMN2BtTTas2J1EtVqDdyP0wXtzZQNZHsG3mSgj5uxkz6w8oWn8q5tm6i5A==", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 210ms (Views: 208.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:48:10 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"czf2FukzgRocunUTM+trzSVb4KPXO1Oo8tDQNOm0bNBTSbWEAPAe6brrUJQNMDox/V382Yn5UxTim8nnklMafw==", "session"=>{"email"=>"hunter@hunter.in", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunter@hunter.in"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 188ms (Views: 185.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-10-10 19:48:12 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.0ms)
+  Rendered users/new.html.erb within layouts/application (76.8ms)
+Completed 200 OK in 353ms (Views: 273.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-10 19:48:25 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gmr71qhrReA5CLDrVoYHPY+zNBAI/Ulq9cgg25O/z1JuYRO924FFbeYJ2wi6iZTapvQssVfeRS/DRWbYhVTdOA==", "user"=>{"name"=>"ABC DEF", "email"=>"hunter@hunter.com", "password"=>"[FILTERED]", "roles"=>"1"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunter@hunter.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ABC DEF"], ["email", "hunter@hunter.com"], ["password_digest", "$2a$10$7Rfj3JxMyV0H2j42SGzprOCwWkqW.5t.F4DxA3i4QI12YxBuZzwLu"], ["roles", 1.0], ["created_at", "2018-10-10 23:48:26.023894"], ["updated_at", "2018-10-10 23:48:26.023894"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 134ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-10-10 19:48:26 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 282ms (Views: 201.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-10 19:48:38 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 251ms (Views: 188.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 19:48:41 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 254ms (Views: 190.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-10-10 19:53:57 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 135ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-10 19:54:30 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6ctcCfsLz3oztUD1uDBkkbui57rCbS5bmC8Sj8pZmp+dwLRiiOHP9+y0KxZUP/d2kuX/G51OIh6uolSM3LKI9Q==", "user"=>{"name"=>"ABC DEFG", "email"=>"hunting@hunting.com", "password"=>"[FILTERED]", "roles"=>"2"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunting@hunting.com"], ["LIMIT", 1]]
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "ABC DEFG"], ["email", "hunting@hunting.com"], ["password_digest", "$2a$10$tam/19wnXBOKzxEXbnAHDuDTm2s5.mfUwoQmqUz2SORW.GPQwJWJy"], ["roles", 2.0], ["created_at", "2018-10-10 23:54:30.597597"], ["updated_at", "2018-10-10 23:54:30.597597"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 63ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-10-10 19:54:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 109ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-10 19:54:33 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 105ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 19:54:35 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 106ms (Views: 78.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 19:54:49 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rt6TmKoL28GHnXxQHiDAkbjTeuZiVQmRmXdnHmEoDJJmoNAKQ8hEMiHMWdcg+5FtYNVmnDyXCS2JPH7NGs96PQ==", "session"=>{"email"=>"hunting@hunting.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunting@hunting.com"], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 142ms (Views: 86.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-10 19:54:52 -0400
+Processing by InquiriesController#index as HTML
+Completed 406 Not Acceptable in 1152ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (InquiriesController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.6) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.6) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-10 20:31:29 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 131ms (Views: 101.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 20:31:37 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 124ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 20:31:47 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sQKDy7bp6eyffP2TC8B1E0zH5tExfRrVtiaVWsEVjViRfMBZXyp2Hzkt2BQ1GyTvlMH6q2+/GmmmbYyJuvL79w==", "session"=>{"email"=>"hunting@hunting.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunting@hunting.com"], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 147ms (Views: 79.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-10 20:31:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReplies (20181011024650)
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "replies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "inquiry_id" integer, "user_id" integer, "reply_message" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181011024650"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPhoneNumberToUsers (20181011025523)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "users" ADD "phone_number" varchar[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181011025523"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPreferredContactMethodToUsers (20181011025733)
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "users" ADD "preferred_contact_method" integer[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181011025733"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-10-10 23:12:58 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 118ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-10-10 23:13:03 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (63.8ms)
+  Rendered users/new.html.erb within layouts/application (90.7ms)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `preferred_contact_methods' for #<Class:0x0000000007c0ba00>
+Did you mean?  protected_methods):
+    33: 
+    34:   <div class="field">
+    35:     <%= f.label :preferred_contact_method %><br />
+    36:     <%= f.select(:preferred_contact_method, User.preferred_contact_methods.keys, {}, { :class=> "form-control" }) %>
+    37:   </div>
+    38: 
+    39:   <div class="field">
+  
+app/views/users/_form.html.erb:36:in `block in _app_views_users__form_html_erb__305544887_55807080'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__305544887_55807080'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__945980452_66089400'
+Started GET "/users/new" for 127.0.0.1 at 2018-10-10 23:13:50 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (25.0ms)
+  Rendered users/new.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 185ms (Views: 133.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-10 23:15:34 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hl3QmzeniV2WQ8WduTN/gu0C4AY3cHqRJqv0liHihVTyVjjwRE2J0ElCrn5VPOxlxEX4p2hTdtQQJrKVNwmXPg==", "user"=>{"name"=>"Hunter1", "email"=>"hunter1@h.com", "password"=>"[FILTERED]", "phone_number"=>"1234567890", "preferred_contact_method"=>"email", "roles"=>"2"}, "commit"=>"Create User"}
+Unpermitted parameters: :phone_number, :preferred_contact_method
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunter1@h.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Hunter1"], ["email", "hunter1@h.com"], ["password_digest", "$2a$10$87I93sp00FsEwZHW5GxxlOy0DVdvmX.khOMRnXv11Wph42N4L3wFi"], ["roles", 2.0], ["created_at", "2018-10-11 03:15:34.569150"], ["updated_at", "2018-10-11 03:15:34.569150"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 68ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2018-10-10 23:15:34 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 114ms (Views: 80.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-10-10 23:15:39 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 105ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2018-10-10 23:15:42 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 105ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-10-10 23:15:56 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yZjI29UjwSZ1rDjVZWqoQmr3xqPUgBmrqJbEJhFgiBjp5otJPOBe1dP9HVJbsfm+svHa2YpCGRe43d31aof+tw==", "session"=>{"email"=>"hunter1@h.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hunter1@h.com"], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 132ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/inquiries" for 127.0.0.1 at 2018-10-10 23:15:59 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for InquiriesController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/4/edit" for 127.0.0.1 at 2018-10-10 23:16:09 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 139ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/real_estate_companies" for 127.0.0.1 at 2018-10-10 23:16:15 -0400
+Processing by RealEstateCompaniesController#index as HTML
+  Rendering real_estate_companies/index.html.erb within layouts/application
+  Rendered real_estate_companies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 114ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-10 23:16:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["email", "admin@admin.com"], ["password_digest", "$2a$10$Vd2GHrGXjMYQO5kwMcZCzuUqDnnPabDyyQQC7Zxtt6mJaSWAvbUCW"], ["roles", 0.0], ["created_at", "2018-10-11 03:33:56.765464"], ["updated_at", "2018-10-11 03:33:56.765464"], ["phone_number", "1800-22-3333"], ["preferred_contact_method", 0]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "administrator@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (4.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["email", "administrator@admin.com"], ["password_digest", "$2a$10$bhY.rvIu5siaIlfwCO5T9.UtIHiNr2Hbqj7PX4Ty3iS6K8uvMb/r2"], ["roles", 0.0], ["created_at", "2018-10-11 03:35:48.807801"], ["updated_at", "2018-10-11 03:35:48.807801"], ["phone_number", "1800-22-3333"], ["preferred_contact_method", 0]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "realtor@realtor.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "administrator@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "administrator@admin.in"], ["LIMIT", 1]]
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["email", "administrator@admin.in"], ["password_digest", "$2a$10$QFuOwB2K62KKLEpg3tMrvuRlSjuAlEjVxcRf9jpP3u0ju9VHL.p1e"], ["roles", 0.0], ["created_at", "2018-10-11 03:37:40.107199"], ["updated_at", "2018-10-11 03:37:40.107199"], ["phone_number", "1800-22-3333"], ["preferred_contact_method", 0]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "realestateagent@realtor.in"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 8], ["name", "realtor"], ["email", "realestateagent@realtor.in"], ["password_digest", "$2a$10$zpYzscdZp1y7ummjmm5OUe6I7SB05U6SK0c9QrhXcuk2VynZMkdJi"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:40.167039"], ["updated_at", "2018-10-11 03:37:40.167039"], ["phone_number", "1800-33-4444"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "househunter@hunter.in"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "hunter"], ["email", "househunter@hunter.in"], ["password_digest", "$2a$10$2AuOJJJg0n6MG8ent6pr3.qaEgfivFC6uNPBYwbbdZ5dyBv/JaWW6"], ["roles", 1.0], ["created_at", "2018-10-11 03:37:40.223887"], ["updated_at", "2018-10-11 03:37:40.223887"], ["phone_number", "1800-44-5555"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jamie@schaefer.net"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 5], ["name", "Cristina"], ["email", "jamie@schaefer.net"], ["password_digest", "$2a$10$q0TbF80lpsEVOBU8S34MkOGQFPyVLEhOczQcPGbE5Q3nDny22ZPD6"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.363840"], ["updated_at", "2018-10-11 03:37:41.363840"], ["phone_number", "250.032.4412"], ["preferred_contact_method", 0]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "earl@barrows.io"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 10], ["name", "Hunter"], ["email", "earl@barrows.io"], ["password_digest", "$2a$10$octqb33zeS4YI.DIWZJdluKm.KVFuZOjbNmeR4f/jvHod.xPMAhgC"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.420688"], ["updated_at", "2018-10-11 03:37:41.420688"], ["phone_number", "1-767-344-6708 x831"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "haydendamore@kertzmann.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 2], ["name", "Jordon"], ["email", "haydendamore@kertzmann.com"], ["password_digest", "$2a$10$JAmgnh.8RCuWehFHr7bwneF1cgvmacBAhIg5qFSzUvTkof7gQtI2O"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.477536"], ["updated_at", "2018-10-11 03:37:41.477536"], ["phone_number", "1-942-174-6172"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gino@turner.co"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 7], ["name", "Devin"], ["email", "gino@turner.co"], ["password_digest", "$2a$10$ggl/7R97VZTwKp0A0MSz1.ADYiOH5WaD0s6z3ibyzL8v6Za1ELA7i"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.536379"], ["updated_at", "2018-10-11 03:37:41.536379"], ["phone_number", "(130) 539-4659 x914"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "elliot@simonis.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 8], ["name", "Antone"], ["email", "elliot@simonis.com"], ["password_digest", "$2a$10$e3jbn53X3uwaezha1xTkSOcJNtI5sseh1kgpSVYHbdAPMA1WlgRl2"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.594223"], ["updated_at", "2018-10-11 03:37:41.594223"], ["phone_number", "1-320-576-6029 x3365"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ashley@spinka.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 10], ["name", "Mike"], ["email", "ashley@spinka.name"], ["password_digest", "$2a$10$1zwrhfuMEVbKigT54UpF6.aIo5czJdUWpZ2m5gDoznriQeuGQTP6W"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.654087"], ["updated_at", "2018-10-11 03:37:41.654087"], ["phone_number", "(242) 736-5461 x76038"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jose@haleyrogahn.io"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 1], ["name", "Nevada"], ["email", "jose@haleyrogahn.io"], ["password_digest", "$2a$10$g7icek/SkCGQcr1g2vYoce66k/GGkl.cjUzD17Z/GBfVSB3PHeXRO"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.712907"], ["updated_at", "2018-10-11 03:37:41.712907"], ["phone_number", "1-196-441-0504"], ["preferred_contact_method", 0]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rubinhowell@smith.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 9], ["name", "Christiana"], ["email", "rubinhowell@smith.org"], ["password_digest", "$2a$10$YaFQak4Yeespglfi3HtHyuhBIUmDI5QYFjLToQ/vNDJxrwXdqbYUG"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.769754"], ["updated_at", "2018-10-11 03:37:41.769754"], ["phone_number", "1-882-642-5105"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "eldenbalistreri@schowalter.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 10], ["name", "Roscoe"], ["email", "eldenbalistreri@schowalter.biz"], ["password_digest", "$2a$10$tsSjwkMk64N5/auAhPdgy.P0RlBWYQBWVxZLP8h9XpIMuxynM2Cw2"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.825605"], ["updated_at", "2018-10-11 03:37:41.825605"], ["phone_number", "434.663.0101 x75642"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "chang@kertzmann.name"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 6], ["name", "Levi"], ["email", "chang@kertzmann.name"], ["password_digest", "$2a$10$tST0ir569toJHlvGRnsWGeM6yeUFCe.L.wmkezFUmpwQdcQK.npXm"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.882454"], ["updated_at", "2018-10-11 03:37:41.882454"], ["phone_number", "562.592.5316"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jarvisschumm@kling.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 10], ["name", "Ofelia"], ["email", "jarvisschumm@kling.io"], ["password_digest", "$2a$10$b.lt2fNTw1nKtb/G4tYSRuecMhPrEh3U83QJ4Cgno..M/nRC8fpIe"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.938304"], ["updated_at", "2018-10-11 03:37:41.938304"], ["phone_number", "(637) 316-6717"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "breanna@lefflernitzsche.org"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 8], ["name", "Hobert"], ["email", "breanna@lefflernitzsche.org"], ["password_digest", "$2a$10$o7Y113NJ0SCx90NuiuKDIuJ0B4MijX7rz1NHFaEqrmyru.DGl9jBi"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:41.995152"], ["updated_at", "2018-10-11 03:37:41.995152"], ["phone_number", "458.786.1123 x24846"], ["preferred_contact_method", 0]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kareem@witting.co"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 1], ["name", "Ashlyn"], ["email", "kareem@witting.co"], ["password_digest", "$2a$10$4InbMkMpRBVXZJNbLgoKJeAu2IK1Xfh98ild6vJAvG5mWnLUpfFSq"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:42.052154"], ["updated_at", "2018-10-11 03:37:42.052154"], ["phone_number", "(744) 362-0012"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "johnetteshields@miller.info"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 7], ["name", "Jerold"], ["email", "johnetteshields@miller.info"], ["password_digest", "$2a$10$3cqVCtMNCcujv7CC7JF4ReP2FE6q/rtj5kCVmY6tQ3OrMhvjaJ18u"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:42.108977"], ["updated_at", "2018-10-11 03:37:42.108977"], ["phone_number", "(622) 764-2071"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gaston@halvorson.name"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 10], ["name", "Karleen"], ["email", "gaston@halvorson.name"], ["password_digest", "$2a$10$0tya4j4tKe9F1CfgggL2b.Bfz7Mck8GEWu.9DFrO96BqkY7JzKx1u"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:42.166823"], ["updated_at", "2018-10-11 03:37:42.166823"], ["phone_number", "573-016-8921 x2825"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tobiasswift@haag.name"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 2], ["name", "Vito"], ["email", "tobiasswift@haag.name"], ["password_digest", "$2a$10$1Isxw9ORQ0blcTGhlEmX3./9vhMY3o9XXOjze8SMfSwK7JDeE.zU."], ["roles", 2.0], ["created_at", "2018-10-11 03:37:42.223700"], ["updated_at", "2018-10-11 03:37:42.223700"], ["phone_number", "1-994-996-0226"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rocco@kutch.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 4], ["name", "Deandrea"], ["email", "rocco@kutch.name"], ["password_digest", "$2a$10$Hq1Py5kraQF2xaSf6USG4.d0pbP3Vr/inTTynumaRuHmTJlbK1cm2"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:42.282541"], ["updated_at", "2018-10-11 03:37:42.282541"], ["phone_number", "(742) 485-6503 x730"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "latanya@heller.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 8], ["name", "Sydney"], ["email", "latanya@heller.biz"], ["password_digest", "$2a$10$2mSNygRR/ogpmQIgM.2blOlUEi3iJAXIUmBXEU2OCPKhZ6BGAfMzy"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:42.339361"], ["updated_at", "2018-10-11 03:37:42.339361"], ["phone_number", "(465) 776-2708"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "cecilabernathy@blockarmstrong.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 2], ["name", "Ryan"], ["email", "cecilabernathy@blockarmstrong.com"], ["password_digest", "$2a$10$aCuXx/62c473XARrxc1T8.2E/ArLIUjZ12pxRmTsG7m5Qp6BgYHT6"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:42.397251"], ["updated_at", "2018-10-11 03:37:42.397251"], ["phone_number", "(956) 098-1550 x6081"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jamie@hintzdeckow.io"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "created_at", "updated_at", "phone_number", "preferred_contact_method") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 7], ["name", "Ashely"], ["email", "jamie@hintzdeckow.io"], ["password_digest", "$2a$10$kCs8A7EQ8V2CieTRD3kQIu16mn/zBBIaVp5p7j6QZRdyy9Q7l6wuu"], ["roles", 2.0], ["created_at", "2018-10-11 03:37:42.455077"], ["updated_at", "2018-10-11 03:37:42.455077"], ["phone_number", "808-691-7305"], ["preferred_contact_method", 0]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m

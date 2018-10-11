@@ -1,9 +1,12 @@
 class User < ApplicationRecord
   has_secure_password
 
-  validates :name, :presence => true
+  has_one :real_estate_company
+  has_many :inquiries
+
+  validates_presence_of :email, :name
   #can put additional validation here
-  validates :email, :presence => true,
-            :uniqueness => true
+  validates :email, :uniqueness => true
   validates :roles, :presence => true
+  enum contact_method: [:email,:text, :call]
 end
