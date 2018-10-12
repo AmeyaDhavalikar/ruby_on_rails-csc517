@@ -1,1 +1,12 @@
-We do not yet have a preconfigured admin. The login and signup options work, where the users are added to the database.
+
+Administrator account : 
+Email : administrator@admin.in
+Password : password
+
+Realtor account:
+Email : realestateagent@realtor.in
+Password : password
+
+Househunter account :
+Email : househunter@hunter.in
+Password : password
