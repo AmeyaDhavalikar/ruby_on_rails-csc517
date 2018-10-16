@@ -3,6 +3,8 @@ require 'test_helper'
 class UserControllerTest < ActionDispatch::IntegrationTest
   def sign_in
     # log in as admin
+    # rails 5 does not support access to session variables from controller tests.
+    # logging in here isn't working. I'm not sure what to do about the preconditions for these tests for validation
     post '/login', params: { email: 'administrator@admin.in', password: 'password'}
   end
 
