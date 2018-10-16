@@ -12142,3 +12142,159 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 40ms (Views: 30.9ms | ActiveRecord: 1.0ms)
 
 
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (10.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "houses"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "houses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_id" integer, "location" varchar, "square_footage" varchar, "year" integer, "style" varchar, "price" integer, "floors" integer, "basement" boolean, "owner" varchar)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "inquiries"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "inquiries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "house_id" integer, "user_id" integer, "subject" varchar, "message" varchar)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "real_estate_companies"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "real_estate_companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "website" varchar, "address" varchar, "size" varchar, "founded" decimal, "revenue" varchar, "synopsis" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (11.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_id" integer, "name" varchar, "email" varchar, "password_digest" varchar, "roles" decimal, "phone_number" varchar, "preferred_contact_method" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (12.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "houses"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "houses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_id" integer, "location" varchar, "square_footage" varchar, "year" integer, "style" varchar, "price" integer, "floors" integer, "basement" boolean, "owner" varchar)[0m
+  [1m[35m (13.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "inquiries"[0m
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "inquiries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "house_id" integer, "user_id" integer, "subject" varchar, "message" varchar)[0m
+  [1m[35m (12.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "real_estate_companies"[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "real_estate_companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "website" varchar, "address" varchar, "size" varchar, "founded" decimal, "revenue" varchar, "synopsis" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (17.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_id" integer, "name" varchar, "email" varchar, "password_digest" varchar, "roles" decimal, "phone_number" varchar, "preferred_contact_method" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-10-16 21:23:07.411835"], ["key", "environment"]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "development"], ["updated_at", "2018-10-16 21:23:22.325251"], ["key", "environment"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "administrator@admin.in"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["email", "administrator@admin.in"], ["password_digest", "$2a$10$U3TKq5ruGI7TJ7sGFs3xDuE5g7/8E4EfpRX.7r4jGlzzfarI.coaq"], ["roles", 0.0], ["phone_number", "1800-22-3333"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:29.075158"], ["updated_at", "2018-10-16 21:23:29.075158"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "realestateagent@realtor.in"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 2], ["name", "realtor"], ["email", "realestateagent@realtor.in"], ["password_digest", "$2a$10$MrilG3VCyHvIS6i3GNXete0oUmNkpMdVMLHHrgN1hpcBJh/Zgedpq"], ["roles", 2.0], ["phone_number", "1800-33-4444"], ["preferred_contact_method", "text"], ["created_at", "2018-10-16 21:23:29.138138"], ["updated_at", "2018-10-16 21:23:29.138138"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "househunter@hunter.in"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "hunter"], ["email", "househunter@hunter.in"], ["password_digest", "$2a$10$OqeiySgRPR9WO6yD/xYqZOK3CxndKi5dcscVHY69kQmK36gm8Cb9q"], ["roles", 1.0], ["phone_number", "1800-44-5555"], ["preferred_contact_method", "text"], ["created_at", "2018-10-16 21:23:29.201118"], ["updated_at", "2018-10-16 21:23:29.201118"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shad@koch.io"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 3], ["name", "Dianna"], ["email", "shad@koch.io"], ["password_digest", "$2a$10$QdBXxZLQyrElgCGY/JwC2ezDc6Hn2jdq/vP8nChi89sCiYwu83BYy"], ["roles", 2.0], ["phone_number", "414.370.1019 x1578"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.195788"], ["updated_at", "2018-10-16 21:23:30.195788"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "scotty@kuvalisconn.org"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 6], ["name", "Shelton"], ["email", "scotty@kuvalisconn.org"], ["password_digest", "$2a$10$lfluCJYaNKCgb.MZvLfQp.zo9VwthRWnBP51lHxJwstMfuHigvIDu"], ["roles", 2.0], ["phone_number", "1-368-765-3301"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.258781"], ["updated_at", "2018-10-16 21:23:30.258781"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "natasha@ward.name"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 5], ["name", "Coleman"], ["email", "natasha@ward.name"], ["password_digest", "$2a$10$LV5/Yxrz0FuZT1JY6E4rheQ7MM8JukKVWt7RCNZRHC474ibjkShMm"], ["roles", 2.0], ["phone_number", "(222) 512-4482"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.320762"], ["updated_at", "2018-10-16 21:23:30.320762"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sydneypacocha@koelpin.name"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 6], ["name", "Sheena"], ["email", "sydneypacocha@koelpin.name"], ["password_digest", "$2a$10$XKreRFO71jgenqKxlI.JnuMvZMUQavsVxBgXmdLxSpjYAppEySV4C"], ["roles", 2.0], ["phone_number", "(848) 873-4025 x506"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.385741"], ["updated_at", "2018-10-16 21:23:30.385741"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stepheniedurgan@ondricka.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 6], ["name", "Rhea"], ["email", "stepheniedurgan@ondricka.biz"], ["password_digest", "$2a$10$M7m8AcwuX/pdvhTxZmT32ubRYvrI0f9PKKShuBVL7ZrVoY6lfW8Wa"], ["roles", 2.0], ["phone_number", "(341) 601-8796"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.447721"], ["updated_at", "2018-10-16 21:23:30.447721"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "genna@bednar.net"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 8], ["name", "Many"], ["email", "genna@bednar.net"], ["password_digest", "$2a$10$wKmXGUSsLqlqaBxydeixzeKAVQ6tuGQ9OIdPdMbzDvDKs.dPzyAxm"], ["roles", 2.0], ["phone_number", "1-624-456-0448 x107"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.511689"], ["updated_at", "2018-10-16 21:23:30.511689"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lakiesha@bogisich.info"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 1], ["name", "Roland"], ["email", "lakiesha@bogisich.info"], ["password_digest", "$2a$10$MOY5RNph1bNipvDrRQvB0eB4rvuu7fx7vrLBflRpobBYXkByy8ok."], ["roles", 2.0], ["phone_number", "413.500.2530 x51255"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.577683"], ["updated_at", "2018-10-16 21:23:30.577683"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "wilburjacobs@green.name"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 10], ["name", "Loida"], ["email", "wilburjacobs@green.name"], ["password_digest", "$2a$10$Uwmxk0nqD.3EetNcU9Wju.vv/xcGVd1ojkVAbi6QVbN8Bj9ABzN9i"], ["roles", 2.0], ["phone_number", "362-608-7515"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.639688"], ["updated_at", "2018-10-16 21:23:30.639688"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "magalywolff@cormierbogisich.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 10], ["name", "Brian"], ["email", "magalywolff@cormierbogisich.com"], ["password_digest", "$2a$10$1R59I9YYdAg022fK/z3hu.LqjtPPJZnJh.J1Am5pmPOS1Y2mFkglG"], ["roles", 2.0], ["phone_number", "1-472-342-6005"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.701656"], ["updated_at", "2018-10-16 21:23:30.701656"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sharla@schulistemmerich.co"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 7], ["name", "Gale"], ["email", "sharla@schulistemmerich.co"], ["password_digest", "$2a$10$LyuhzTMF4EXzTUL5Df9Ryum6jmaVAYyONfOO1BexfcuhwIDv0goo6"], ["roles", 2.0], ["phone_number", "347.409.4761"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.762649"], ["updated_at", "2018-10-16 21:23:30.762649"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "doramurazik@cole.io"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 7], ["name", "Deshawn"], ["email", "doramurazik@cole.io"], ["password_digest", "$2a$10$jSH.Pb9ZHSpnJiBaFbNo9uXx./CQ8Haq.81nY6JTSyyozTGSi604G"], ["roles", 2.0], ["phone_number", "(222) 209-5809"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.824617"], ["updated_at", "2018-10-16 21:23:30.824617"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "arnoldkilback@lakinschmitt.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 2], ["name", "Annamarie"], ["email", "arnoldkilback@lakinschmitt.biz"], ["password_digest", "$2a$10$cuU8Cly686E5GCelW681L.NvnHvgzlbIp1ySaG0ecw11n2i45yoMS"], ["roles", 2.0], ["phone_number", "1-240-366-9254"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.886597"], ["updated_at", "2018-10-16 21:23:30.886597"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "minh@mann.org"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 2], ["name", "Lon"], ["email", "minh@mann.org"], ["password_digest", "$2a$10$fXwWFGWmQSs36dtHaFJ5CePenZhU3.RymT7/if2L0i.OALcDyHAki"], ["roles", 2.0], ["phone_number", "696.457.9450 x094"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:30.948590"], ["updated_at", "2018-10-16 21:23:30.948590"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "reynaldobruen@sawaynboyer.info"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 8], ["name", "Celia"], ["email", "reynaldobruen@sawaynboyer.info"], ["password_digest", "$2a$10$DYmAmN4n/J6EhTAgwJ47FuRBKPvjzrkiVecgONU4sSSviUucgWwme"], ["roles", 2.0], ["phone_number", "896-357-8969 x90284"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:31.010570"], ["updated_at", "2018-10-16 21:23:31.010570"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "almetaokeefe@ruel.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 3], ["name", "Reiko"], ["email", "almetaokeefe@ruel.net"], ["password_digest", "$2a$10$96oqnY303ESly47hhcsPjOrq1Ewfs5qBp8IwSUNkr2O/YauFeGk66"], ["roles", 2.0], ["phone_number", "(626) 986-3161 x67226"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:31.072551"], ["updated_at", "2018-10-16 21:23:31.072551"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luluhahn@wilkinsonmurazik.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 4], ["name", "Casey"], ["email", "luluhahn@wilkinsonmurazik.com"], ["password_digest", "$2a$10$lqZWlot0Ci8bj9YAHfTcseddEXJdVlKX4wpKbw/x7aCl5e17EXz62"], ["roles", 2.0], ["phone_number", "844-605-8559 x4687"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:31.135531"], ["updated_at", "2018-10-16 21:23:31.135531"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "brianrice@dietrichrunte.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 9], ["name", "Fredric"], ["email", "brianrice@dietrichrunte.com"], ["password_digest", "$2a$10$zKWAcOZb/WFeopIVi0tO5.KFmspJpsmYRYBuwaRBnii3SipV4hQA2"], ["roles", 2.0], ["phone_number", "191.581.3158 x298"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:31.198512"], ["updated_at", "2018-10-16 21:23:31.198512"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "carlena@quitzonrohan.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 5], ["name", "Eveline"], ["email", "carlena@quitzonrohan.org"], ["password_digest", "$2a$10$4dnNS9oi08lx6aL6Qb3KiuyxA5X7fr5cw9Tk0YpAh.zy9MI0tgqPS"], ["roles", 2.0], ["phone_number", "(552) 055-7528 x84873"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:31.260492"], ["updated_at", "2018-10-16 21:23:31.260492"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "glennis@armstrong.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 4], ["name", "Darin"], ["email", "glennis@armstrong.com"], ["password_digest", "$2a$10$IJINMpff4V7AD91tfafiQ.UyJNM34tampp.KychRl7RjkRwWEOppS"], ["roles", 2.0], ["phone_number", "278.765.6273 x00135"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:31.323471"], ["updated_at", "2018-10-16 21:23:31.323471"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sheri@west.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("company_id", "name", "email", "password_digest", "roles", "phone_number", "preferred_contact_method", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 9], ["name", "Pedro"], ["email", "sheri@west.biz"], ["password_digest", "$2a$10$D4cRy1BNL.MXHyzJTknXieJa2pFDHaBBqtp8PNx8cl2u9LguSyfQK"], ["roles", 2.0], ["phone_number", "288-706-1789 x44619"], ["preferred_contact_method", "email"], ["created_at", "2018-10-16 21:23:31.385451"], ["updated_at", "2018-10-16 21:23:31.385451"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "real_estate_companies" ("name", "website", "address", "size", "founded", "revenue", "synopsis", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Billy Bobs Mountains"], ["website", "https://bbobmountains.com"], ["address", "Memphis, TN"], ["size", "201-500"], ["founded", 2000.0], ["revenue", "224000"], ["synopsis", "we sell mountains"], ["created_at", "2018-10-16 21:23:31.401446"], ["updated_at", "2018-10-16 21:23:31.401446"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "real_estate_companies" ("name", "website", "address", "size", "founded", "revenue", "synopsis", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Billy Bobs Trash Cans"], ["website", "https://bbobtcans.com"], ["address", "Nashville, TN"], ["size", "1-50"], ["founded", 2017.0], ["revenue", "15000"], ["synopsis", "we sell trash cans and the land theyre on"], ["created_at", "2018-10-16 21:23:31.409431"], ["updated_at", "2018-10-16 21:23:31.409431"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "houses" ("company_id", "location", "square_footage", "year", "style", "price", "floors", "basement", "owner") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 1], ["location", "Memphis, TN"], ["square_footage", "2047"], ["year", 1987], ["style", "Single Family House"], ["price", 215000], ["floors", 2], ["basement", "t"], ["owner", "Jane and Marshal Mountain"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "houses" ("company_id", "location", "square_footage", "year", "style", "price", "floors", "basement", "owner") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["company_id", 2], ["location", "Nashville, TN"], ["square_footage", "1100"], ["year", 1993], ["style", "Apartment"], ["price", 235000], ["floors", 1], ["basement", "f"], ["owner", "Raine Rocker"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
