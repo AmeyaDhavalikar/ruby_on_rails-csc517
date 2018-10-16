@@ -1,4 +1,5 @@
 <%= form_for @user do |f| %>
+
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -26,11 +27,13 @@
     <%= f.password_field :password %>
   </div>
 
+  <% if @user && @user.roles != 0 %>
   <div class="field">
     <%= f.label :roles %><br />
     <%= f.select :roles, [['I am a realtor', 1], ['I am shopping for a house', 2],
                                  ['I am a realtor and I am shopping for a house', 3]] %>
   </div>
+    <% end %>
 
   <div class="field">
     <%= f.label :phone_number %><br />
@@ -40,9 +43,9 @@
   <div class="field">
     <%= f.label :preferred_contact_method %><br />
     <%= f.select :preferred_contact_method, ['Text', 'Phone Call', 'Email'] %>
-  </div>
+  </div><br />
 
   <div class="actions">
     <%= f.submit %>
-  </div>
+  </div><br />
 <% end %>
