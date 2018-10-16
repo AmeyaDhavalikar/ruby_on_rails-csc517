@@ -1,14 +1,16 @@
 class UsersController < ApplicationController
   def user_params
-    params.require(:user).permit(:name, :email, :password, :roles, :company_id)
+    params.require(:user).permit(:name, :email, :password, :roles, :company_id, :phone_number, :preferred_contact_method)
   end
 
   def index
-    @users = User.all
+    if User.find(session[:user_id]).roles == 0
+      @users = User.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @users }
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @users }
+      end
     end
   end
 
@@ -36,8 +38,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to root_path, notice: 'User was successfully created.' }
-        format.json { render json: @user, status: :created, location: @user }
+          format.html { redirect_to home_path, notice: 'User was successfully created.' }
+          format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -46,7 +48,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if params[:id].to_s == session[:user_id].to_s
+    if params[:id].to_s == session[:user_id].to_s || User.find(session[:user_id]).roles == 0
       @user = User.find(params[:id])
     else
       redirect_to home_path
@@ -59,7 +61,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if params[:id].to_s == session[:user_id].to_s
+    if params[:id].to_s == session[:user_id].to_s || User.find(session[:user_id]).roles == 0
       @user = User.find(params[:id])
 
       respond_to do |format|
@@ -77,7 +79,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    if User.find(session[:user_id]).id == :id
+    @logged_in = User.find(session[:user_id])
+    if @logged_in.id == params[:id] || @logged_in.roles == 0
       @user = User.find(params[:id])
       @user.destroy
 

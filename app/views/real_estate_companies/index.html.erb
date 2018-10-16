@@ -18,6 +18,8 @@
         <td><%= real_estate_company.founded %></td>
         <td><%= real_estate_company.revenue %></td>
         <td><%= link_to 'Show', real_estate_company %></td>
+        <td><%= link_to 'Edit', edit_real_estate_company_path(real_estate_company) %></td>
+        <td><%= button_to 'Remove',  real_estate_company, method: :delete, data: {confirm: 'Are you sure?'}%></td>
       </tr>
     <% end %>
     </tbody>

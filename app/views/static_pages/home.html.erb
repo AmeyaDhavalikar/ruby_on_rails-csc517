@@ -3,6 +3,9 @@ Welcome to the Real Estate Manager,<%= @user.name %><br />
 <%= link_to "Edit Your Profile", edit_user_path(@user) %><br />
 <%= link_to "View Your Profile", @user %><br />
 <%= link_to "Log Out", '/logout' %><br />
+<!-- if admin -->
+<%= link_to "View All Users", users_path if @user.roles == 0 %><br />
+<%= link_to "Create A User", new_user_path if @user.roles == 0%><br />
 <!-- if realtor -->
 <%= link_to "List House", new_house_path  if @user.roles != 2 %><br />
 <%= link_to "View Inquiries on Your Company's Houses", inquiries_path if @user.roles != 2 %><br />

@@ -1,6 +1,6 @@
 class HousesController < ApplicationController
   def house_params
-    params.require(:house).permit(:location, :square_footage, :year, :style, :price, :floors, :basement, :owner, :realtor_id)
+    params.require(:house).permit(:location, :square_footage, :year, :style, :price, :floors, :basement, :owner, :company_id)
   end
 
   def new
@@ -16,7 +16,7 @@ class HousesController < ApplicationController
     @user = User.find(session[:user_id])
     if @user.roles != 2 && !@user.company_id.nil?
       @house = House.new(house_params)
-      @house.realtor_id = session[:user_id]
+      @house.company_id = @user.company_id
       respond_to do |format|
         if @house.save
           format.html { redirect_to @house, notice: 'House was successfully listed.' }
@@ -73,8 +73,8 @@ class HousesController < ApplicationController
 
   def destroy
     @user = User.find(session[:user_id])
-    @house = @house = House.find(params[:id])
-    if @user.roles != 2 && @user.id == @house.realtor_id
+    @house = House.find(params[:id])
+    if @user.roles != 2 && @user.company_id == @house.company_id
       @house.destroy
 
       respond_to do |format|

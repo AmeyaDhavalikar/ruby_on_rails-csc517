@@ -32,6 +32,16 @@
                                  ['I am a realtor and I am shopping for a house', 3]] %>
   </div>
 
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :preferred_contact_method %><br />
+    <%= f.select :preferred_contact_method, ['Text', 'Phone Call', 'Email'] %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

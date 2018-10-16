@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 20180930205850) do
 
   create_table "houses", force: :cascade do |t|
     t.integer "company_id"
-    t.integer "realtor_id"
     t.string "location"
     t.string "square_footage"
     t.integer "year"
@@ -50,6 +49,8 @@ ActiveRecord::Schema.define(version: 20180930205850) do
     t.string "email"
     t.string "password_digest"
     t.decimal "roles"
+    t.string "phone_number"
+    t.string "preferred_contact_method"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

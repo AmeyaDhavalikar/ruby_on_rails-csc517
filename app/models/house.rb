@@ -9,5 +9,5 @@ class House < ApplicationRecord
   validates :price, :presence => true, :numericality => true
   validates :floors, :presence => true
   validates :owner, :presence => true
-  validates :realtor_id, :presence => true
+  validates :company_id, :presence => true
 end
