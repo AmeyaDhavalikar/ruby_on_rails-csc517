@@ -1,18 +1,143 @@
-Welcome to the Real Estate Manager,<%= @user.name %><br />
-<p id="notice"><%= notice %></p>
-<%= link_to "Edit Your Profile", edit_user_path(@user) %><br />
-<%= link_to "View Your Profile", @user %><br />
-<%= link_to "Log Out", '/logout' %><br />
-<!-- if admin -->
-<%= link_to "View All Users", users_path if @user.roles == 0 %><br />
-<%= link_to "Create A User", new_user_path if @user.roles == 0%><br />
-<!-- if realtor -->
-<%= link_to "List House", new_house_path  if @user.roles != 2 %><br />
-<%= link_to "View Inquiries on Your Company's Houses", inquiries_path if @user.roles != 2 %><br />
-<%= link_to "Select Your Real Estate Company", '/choose' if @user.roles != 2 %><br />
-<%= link_to "Edit Your Company's Information", edit_real_estate_company_path(@real_estate_company) if @user.roles != 2 && @real_estate_company %><br />
-<%= link_to "View Listed Houses", houses_path if @user.roles != 2 %><br />
-<!-- if house hunter -->
-<%= link_to "Browse Houses", houses_path if @user.roles != 1%><br />
-<%= link_to "View Your Inquiries", inquiries_path if @user.roles != 1%><br />
-<%= link_to "View Real Estate Company Information", real_estate_companies_path if @user.roles != 1 %><br />
+<div class="container" style="margin-top: 50px">
+  <h1>Hey, <%= User.find_by(id: session[:user_id]).name %></h1>
+  <h3>We are here to help people find their dream home :)</h3>
+  <h6>How can we help you?</h6><br><br>
+  <div class="row">
+    <div class="container-fluid">
+      <div class="card ">
+        <div class="card-body">
+          <h5 class="card-title">Edit or View your profile</h5>
+          <p class="card-text">Change your information to correctly reflect who you are.</p>
+          <%= link_to "Edit Your Profile", edit_user_path(@user) %><br/>
+          <%= link_to "View Your Profile", @user %><br />
+        </div>
+      </div>
+      <br />
+      <div class="card ">
+        <div class="card-body">
+          <h5 class="card-title">Log Out</h5>
+          <p class="card-text">Close your current session with the Real Estate Manager.</p>
+          <%= link_to "Log Out", '/logout' %><br/>
+        </div>
+      </div>
+      <br />
+
+      <% if @user.roles == 0 %>
+      <div class="card ">
+        <!-- if admin -->
+        <div class="card-body">
+          <h5 class="card-title">View all users of the system</h5>
+          <p class="card-text">See who uses this site.</p>
+          <%= link_to "View All Users", users_path %><br/>
+        </div>
+      </div>
+        <br />
+      <% end %>
+
+      <% if @user.roles == 0 %>
+      <div class="card ">
+        <!-- if admin -->
+        <div class="card-body">
+          <h5 class="card-title">Create a new user</h5>
+          <p class="card-text">Create a new users for the Real Estate Manager.</p>
+          <%= link_to "Create A User", new_user_path%><br/>
+        </div>
+      </div>
+        <br />
+      <% end %>
+
+      <% if @user.roles != 1 %>
+      <div class="card ">
+        <!-- if house hunter -->
+        <div class="card-body">
+          <h5 class="card-title">Search available houses</h5>
+          <p class="card-text">Look for your dream house according to your preferences.</p>
+          <%= link_to "Browse Houses", houses_path %><br/>
+        </div>
+      </div>
+      <br>
+        <% end %>
+
+      <% if @user.roles != 1 %>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Information about Real Estate Companies</h5>
+          <p class="card-text">Know your company before you make a choice.</p>
+          <%= link_to "View Real Estate Company Information", real_estate_companies_path %><br/>
+        </div>
+      </div>
+      <br>
+        <% end %>
+
+      <% if @user.roles != 1 %>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">View Your Inquires</h5>
+          <p class="card-text">Lists all your inquiries.</p>
+          <%= link_to "View Your Inquiries", inquiries_path if @user.roles != 1 %><br/>
+        </div>
+      </div>
+      <br>
+        <% end %>
+
+      <% if @user.roles != 2 %>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">List A House</h5>
+          <p class="card-text">Add details of new house available here!</p>
+          <%= link_to "List House", new_house_path %><br/>
+        </div>
+      </div>
+      <br>
+        <% end %>
+
+        <% if @user.roles != 2 %>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">View Inquiries on Your Company's Houses</h5>
+          <p class="card-text">List of Inquiries on Your Company's Houses.</p>
+          <%= link_to "View Inquiries on Your Company's Houses", inquiries_path %><br/>
+        </div>
+      </div>
+      <br>
+          <% end %>
+
+      <% if @user.roles != 2 && @real_estate_company %>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Edit Your Company Information</h5>
+          <p class="card-text">Update Your Company Information here!</p>
+          <%= link_to "Edit Your Company Information", edit_real_estate_company_path(@real_estate_company) %><br/>
+        </div>
+      </div>
+      <br>
+      <% end %>
+
+      <% if @user.roles != 2 %>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Select Your Real Estate Company</h5>
+          <p class="card-text">Choose which Real Estate Company you are a part of, or create a new one!</p>
+          <%= link_to "Select Real Estate Company", '/choose' %><br/>
+        </div>
+      </div>
+      <br>
+      <% end %>
+
+      <% if @user.roles != 2 %>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">View All Listed Houses</h5>
+          <p class="card-text">View All Listed Houses here!</p>
+          <%= link_to "View All Listed Houses", houses_path %><br/>
+        </div>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+
+
+
