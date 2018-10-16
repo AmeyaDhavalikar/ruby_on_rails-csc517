@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # User CRUD operations
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
-  get '/users', to: 'users#show'
+  get '/users', to: 'users#index'
   get '/user/:id', to: 'users#edit'
   put '/user/:id', to: 'users#update'
   patch '/user/:id', to: 'users#update'

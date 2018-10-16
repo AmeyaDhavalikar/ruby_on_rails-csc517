@@ -1,12 +1,14 @@
 require 'test_helper'
 
 class UserControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @user = User.find_by(id: 1)
+  def sign_in
+    # log in as admin
+    post '/login', params: { email: 'administrator@admin.in', password: 'password'}
   end
 
   test "should get index" do
-    get users_path
+    sign_in
+    get '/users'
     assert_response :found
   end
 
