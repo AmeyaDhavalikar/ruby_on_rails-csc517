@@ -1,3 +1,4 @@
+# Author: Sam
 class RealEstateCompaniesController < ApplicationController
   def real_estate_company_params
     params.require(:real_estate_company).permit(:name, :website, :address, :size, :founded, :revenue, :synopsis)

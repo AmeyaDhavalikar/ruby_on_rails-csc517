@@ -1,40 +1,53 @@
-<p id="notice"><%= notice %></p>
+<!-- Author: Ameya -->
+<div class="container" style="margin-left: 10px">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @real_estate_company.name %>
-</p>
+  <p>
+    <b>Location:</b>
+    <%= @house.location %>
+  </p>
 
-<p>
-  <b>Website URL:</b>
-  <%= @real_estate_company.website %>
-</p>
+  <p>
+    <strong>House owner:</strong>
+    <%= @house.owner %>
+  </p>
 
-<p>
-  <b>Address:</b>
-  <%= @real_estate_company.address %>
-</p>
+  <p>
+    <b>List Price:</b>
+    <%= @house.price %>
+  </p>
 
-<p>
-  <b>Size:</b>
-  <%= @real_estate_company.size %>
-</p>
+  <p>
+    <b>Year Built:</b>
+    <%= @house.year %>
+  </p>
 
-<p>
-  <b>Founded:</b>
-  <%= @real_estate_company.founded %>
-</p>
+  <p>
+    <b>Number of Floors:</b>
+    <%= @house.floors %>
+  </p>
 
-<p>
-  <b>Revenue:</b>
-  <%= @real_estate_company.revenue %>
-</p>
+  <p>
+    <b>Style:</b>
+    <%= @house.style %>
+  </p>
 
-<p>
-  <b>Synopsis:</b>
-  <%= @real_estate_company.synopsis %>
-</p>
+  <p>
+    <b>Basement:</b>
+    <%= @house.basement %>
+  </p>
 
 
-<%= link_to 'Edit', edit_real_estate_company_path(@real_estate_company) %> |
-<%= link_to 'Back', home_path %>
+  <p>
+    <b>Square Footage:</b>
+    <%= @house.square_footage %>
+  </p>
+
+  <!-- If posting realtor -->
+  <%= link_to 'Edit this inquiry', edit_inquiry_path %> |
+  <!-- If house hunter -->
+  <%= link_to 'Inquire about this House', new_inquiry_path %>
+
+  <%= link_to 'List Houses', houses_path %>
+
+</div>

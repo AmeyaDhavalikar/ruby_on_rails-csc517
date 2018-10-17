@@ -1,3 +1,4 @@
+# Author: Sam
 class StaticPagesController < ApplicationController
   def index
 

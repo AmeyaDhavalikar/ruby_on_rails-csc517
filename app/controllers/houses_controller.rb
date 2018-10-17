@@ -1,3 +1,4 @@
+# Author: Sam and Abhilasha
 class HousesController < ApplicationController
   def house_params
     params.require(:house).permit(:location, :square_footage, :year, :style, :price, :floors, :basement, :owner, :company_id)
@@ -54,7 +55,10 @@ class HousesController < ApplicationController
   def index
     @user = User.find(session[:user_id])
     @houses = House.all
-
+    if params[:search]
+      @search_term=params[:search]
+      @houses=@houses.search_by(@search_term)
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @houses }

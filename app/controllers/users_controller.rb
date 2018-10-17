@@ -1,3 +1,4 @@
+# Author: Sam
 class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :roles, :company_id, :phone_number, :preferred_contact_method)

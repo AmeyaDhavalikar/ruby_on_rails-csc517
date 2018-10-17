@@ -1,3 +1,4 @@
+# Author: Sam and Abhilasha
 class House < ApplicationRecord
   #belongs_to :real_estate_company
   #belongs_to :user
@@ -10,4 +11,8 @@ class House < ApplicationRecord
   validates :floors, :presence => true
   validates :owner, :presence => true
   validates :company_id, :presence => true
+
+  def self.search_by(search_term)
+    where("LOWER(location) LIKE :search_term OR LOWER(price) LIKE :search_term",search_term:"%#{search_term.downcase}")
+  end
 end

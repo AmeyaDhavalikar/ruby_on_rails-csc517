@@ -1,3 +1,4 @@
+# Author: Sam
 class SessionsController < ApplicationController
 
   def new
