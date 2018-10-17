@@ -33,3 +33,5 @@ Our Real Estate Manager application has the following features:
     +the ability to view information about real estate companies
     +the ability to view all listed houses
     -a feature to search houses that was working locally (albeit only finding results on exact matches)
+
+For the commit feed for this project before it was moved to this repository, please see https://github.ncsu.edu/sjrappl/CSC517RubyOnRails
